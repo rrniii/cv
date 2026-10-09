@@ -440,7 +440,7 @@ local function render_latex(doc)
   if meta_string(cv_latex.compactheader, "") == "true" then
     table.insert(blocks, pandoc.RawBlock("latex", "\\CVcompactheadertrue"))
   end
-  for _, key in ipairs({"maxnames", "minnames"}) do
+  for _, key in ipairs({"maxnames", "minnames", "interlinepenalty"}) do
     local value = meta_string(cv_latex[key], "")
     if value:match("^%d+$") then
       table.insert(blocks, pandoc.RawBlock("latex", "\\renewcommand{\\CVbib" .. key .. "}{" .. value .. "}"))

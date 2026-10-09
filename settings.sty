@@ -85,9 +85,11 @@
 }
 \newcommand\CVbibmaxnames{99}
 \newcommand\CVbibminnames{99}
+\newcommand\CVbibinterlinepenalty{}
 \AtBeginBibliography{%
   \setcounter{maxnames}{\CVbibmaxnames}%
   \setcounter{minnames}{\CVbibminnames}%
+  \ifdefempty{\CVbibinterlinepenalty}{}{\interlinepenalty=\CVbibinterlinepenalty\relax}%
 }
 \DefineBibliographyStrings{english}{url={\textsc{url}}}
 \RequirePackage{csquotes}

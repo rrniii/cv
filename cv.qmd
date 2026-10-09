@@ -2,6 +2,7 @@
 cv-latex:
   rubricspace: "0pt"
   subrubricspace: "1pt"
+  bibinterlinepenalty: "10000"
 format:
   html:
     toc: true
@@ -17,11 +18,6 @@ format:
 {{< include sections/students.md >}}
 {{< include sections/dissertation_committees.md >}}
 {{< include sections/grants/awarded.md >}}
-
-```{=latex}
-\AtBeginBibliography{\interlinepenalty=10000}
-```
-
 {{< include generated/md/publications.md >}}
 {{< include sections/other_outputs.md >}}
 {{< include sections/datasets.md >}}
