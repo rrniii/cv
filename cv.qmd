@@ -1,4 +1,7 @@
 ---
+cv-latex:
+  rubricspace: "0pt"
+  subrubricspace: "1pt"
 format:
   html:
     toc: true

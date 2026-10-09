@@ -15,6 +15,7 @@ format:
 {{< include generated/md/publications_selected_funding.md >}}
 {{< include sections/grants/active.md >}}
 {{< include sections/awards_selected.md >}}
+{{< pagebreak >}}
 {{< include sections/teaching_condensed.md >}}
 {{< include sections/students_short.md >}}
 {{< include sections/service_short.md >}}
