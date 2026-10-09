@@ -2,7 +2,7 @@
 cv-latex:
   rubricspace: "0pt"
   subrubricspace: "1pt"
-  bibinterlinepenalty: "10000"
+  interlinepenalty: "10000"
 format:
   html:
     toc: true
