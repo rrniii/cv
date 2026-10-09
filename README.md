@@ -68,6 +68,8 @@ make cv-pdf      # full CV PDF
 
 Run `make generate` before calling `quarto render` directly on a clean checkout:
 Quarto resolves includes before its pre-render hooks. Outputs go into `_build/`;
+use `make all` to explicitly build both PDF and HTML, since a plain render uses
+each document's default format.
 `generated/` and `data/stats.json`/`data/macros.tex` are rebuilt automatically and
 must not be edited by hand. `make clean` removes `_build/`.
 

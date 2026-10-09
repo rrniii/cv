@@ -61,16 +61,22 @@ jobs:
         run: make all
 
       - name: Verify short CV page counts
+        shell: bash
         run: |
-          mismatched=0
+          set -euo pipefail
+          for document in cv cv-1p cv-2p cv-3p publications; do
+            test -s "_build/${document}.pdf" || {
+              echo "::error::Missing PDF: ${document}.pdf"
+              exit 1
+            }
+          done
           for pages in 1 2 3; do
             actual="$(pdfinfo "_build/cv-${pages}p.pdf" | awk '/^Pages:/ {print $2}')"
-            if [ "$actual" -ne "$pages" ]; then
+            if [[ ! "$actual" =~ ^[0-9]+$ ]] || [[ "$actual" -ne "$pages" ]]; then
               echo "::error::cv-${pages}p.pdf has ${actual} pages; expected ${pages}."
-              mismatched=1
+              exit 1
             fi
           done
-          exit "$mismatched"
 
       - name: Upload build for download and review
         if: always() && steps.render.outcome == 'success'
@@ -125,6 +131,7 @@ jobs:
           target_commitish: ${{ github.sha }}
           name: Curriculum vitae
           body: "Built from commit ${{ github.sha }}"
+          fail_on_unmatched_files: true
           files: |
             _build/cv.pdf
             _build/cv-3p.pdf

@@ -14,7 +14,8 @@ generate:
 	$(PYTHON) scripts/render_publications_web.py
 
 all: generate
-	$(QUARTO) render
+	$(QUARTO) render --to pdf
+	$(QUARTO) render --to html --no-clean
 	$(MAKE) site
 
 site:
@@ -30,7 +31,8 @@ html: generate
 	$(MAKE) site
 
 cv 3p 2p 1p: generate
-	$(QUARTO) render $(if $(filter cv,$@),cv.qmd,cv-$@.qmd)
+	$(QUARTO) render $(if $(filter cv,$@),cv.qmd,cv-$@.qmd) --to pdf
+	$(QUARTO) render $(if $(filter cv,$@),cv.qmd,cv-$@.qmd) --to html --no-clean
 
 cv-pdf cv-html: generate
 	$(QUARTO) render cv.qmd --to $(subst cv-,,$@)
