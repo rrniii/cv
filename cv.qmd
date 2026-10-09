@@ -18,6 +18,11 @@ format:
 {{< include sections/students.md >}}
 {{< include sections/dissertation_committees.md >}}
 {{< include sections/grants/awarded.md >}}
+
+```{=latex}
+\clearpage
+```
+
 {{< include generated/md/publications.md >}}
 {{< include sections/other_outputs.md >}}
 {{< include sections/datasets.md >}}
