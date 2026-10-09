@@ -1,39 +1,12 @@
 <!--
 type: dated
+tex: generated/tex/service_academic
 -->
 
-## Academic Service
+## Academic Leadership and Service
 
-### Department
-
-- Spring 2026 | AMO Faculty Search Committee
-- Spring 2026 | Submitted College of Sciences Undergraduate Research Program on behalf of the department
-- 2025 | Physics Department SWOT Committee
-- 2024 -- | Graduate Admissions Committee
-- 2022 -- | Graduate Recruitment Committee
-- 2022 -- | Graduate Preview Committee
-- 2022 -- | Undergraduate Program Committee
-- Summer 2022 | Research Assistant Professor Search Committee
-- Spring 2022 | Submitted College of Sciences Undergraduate Research Program on behalf of the department
-
-### College
-
-- Spring 2026 | Trailing Marshall, Undergraduate Degree Ceremony
-- Fall 2025 | Lead Marshall, Undergraduate Degree Ceremony
-- Spring 2025 | Faculty Marshall, Undergraduate Degree Ceremony
-- Fall 2023 | Robing Marshall, Undergraduate Degree Ceremony
-- Spring 2023 | Floating Marshall, Undergraduate Degree Ceremony
-- Spring 2022 | Assistant Deputy Marshall, Advanced Degree Commencement Ceremony
-
-### University
-
-- Summer 2026 -- | Vertically Integrated Program for Undergraduate Research (VIPUR) Founding Faculty Group
-- Spring 2026 -- | Quantum Students Association Faculty Advisor
-- Spring 2026 | Faculty Grievance Panel Chair
-- Spring 2025 -- | General Education Steering Committee
-- Summer 2025 -- | General Education Student Learning Outcomes Working Group
-- Summer 2025 -- | General Education First Year Seminar Working Group
-- Fall 2024 | General Education Reform Reading Group
-- 2023 -- | Radiation Safety Committee
-- Spring 2025 | Radiation Safety Officer Search Committee
-- Spring 2022 | Lead Marshall, Advanced Degree Commencement Ceremony, Strome College of Business
+- 2025 -- | **Research Advisory Panel**, Leeds--Met Office Academic Partnership; led the Observations component of the 2025 partnership bid.
+- 2023 -- | **NCAS Science Strategy Board**, national scientific priorities and capability.
+- 2023 -- | **FAAM Mid-Life Upgrade Doppler Lidar Project Co-Lead**, with Hugo Ricketts.
+- 2023 -- 2024 | **Co-Leader**, University of Leeds Horizons Challenge Network on Global Biosphere Sensing.
+- 2020 -- | **Scientific Lead**, Leeds Farm Atmospheric Observatory.

@@ -3,17 +3,12 @@ type: dated
 tex: generated/tex/teaching_condensed
 -->
 
-## Teaching
+## Teaching and Educational Leadership
 
-### Old Dominion University
-
-- Fall 2023 -- 2026 | PHYS 137T: Introduction to Quantum Science and Technology
-- Spring 2022 -- 2025 | PHYS 456: Intermediate Quantum Mechanics
-- Fall 2022, Spring 2023 | PHYS 297: Introduction to Undergraduate Research
-  (co-Instructors: Charles Hyde, Yuan Zhang)
-- Fall 2022 | PHYS 411: Introduction to Atomic Physics
-
-### ETH Zürich
-
-- Spring 2021 | Physics III: Introduction to optical, statistical, and quantum physics (Head TA)
-- Spring 2020 | Cavity QED and Ion Trap Physics (Co-Instructor: Daniel Kienzler)
+- 2025 -- | **Module Leader**, Observing Weather and Climate: Advanced Field Skills (SOEE3791 and SOEE5096), University of Leeds.
+- 2023 -- | **Lecturer and Field Course Leader**, Physical Climate Change, Impacts and Mitigation (SOEE5860M), MSc Climate Futures.
+- 2019 -- | **Lecturer**, Atmosphere (SOEE1281); previously The Atmosphere of Planet Earth (2015--2019).
+- 2017 -- 2023 | **Programme Leader**, MRes Climate and Atmospheric Science; curriculum, assessment and 2021 programme redesign.
+- 2020 -- 2023 | **Course Lead**, NCAS Introduction to Atmospheric Science.
+- 2019 | **Scientific Lead**, NCAS Atmospheric Measurement Summer School.
+- 2024, 2026 | **Lecturer**, International Radar Aeroecology Workshops, Delaware and Amsterdam; dual-polarisation radar and biological-target classification.

@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%
 % CV Preamble — personal/document-specific settings
-% Matt Grau - Old Dominion University
+% Ryan R. Neely III - University of Leeds / NCAS
 %%%%%%%%%%%%%%%
 
 \usepackage{settings}
@@ -16,7 +16,7 @@
 \fi
 \makeatother
 
-% Auto-generated CV metrics (citations, h-index, grant totals, student counts)
+% Locally generated publication counts; no live citation metrics.
 \input{data/macros}
 
 % Bibliography sources
@@ -25,31 +25,44 @@
 
 % Bold author name in publications
 \mynames{
-  Grau/Matt,
-  Grau/M.,
-  Grau/M,
-  Grau/M.\bibnamedelimi C.
+  Neely/Ryan,
+  Neely/Ryan\bibnamedelima R.,
+  Neely/Ryan\bibnamedelima R,
+  Neely/R.,
+  Neely/R,
+  Neely/R.\bibnamedelimi R.,
+  Neely/R.\bibnamedelimi R,
+  Neely/R\bibnamedelimi R
 }
 
-% Header with contact info
+% Header with contact info; the one-page version uses a compact contact line.
+\newif\ifCVcompactheader
 \leftheader{\CVheaderfont%
-  {\LARGE\bfseries\sffamily Matt Grau}
+  {\LARGE\bfseries\sffamily Ryan R. Neely III}
+
+  {\large\sffamily Professor of Atmospheric Physics}
+
+  \ifCVcompactheader
+  {\small University of Leeds \textbullet{} National Centre for Atmospheric Science\\
+  \href{mailto:R.Neely@leeds.ac.uk}{R.Neely@leeds.ac.uk} \textbullet{}
+  \href{https://orcid.org/0000-0003-4560-4812}{ORCID: 0000-0003-4560-4812}}
+  \else
 
   \bgroup\def\arraystretch{1}
-  \begin{tabularx}{\linewidth}{@{}X X p{\CVaddresswidth}@{}}
-  \makefield{\faPhone}{(757) 683-5827} &
-  \makefield{\faOrcid}{\href{https://orcid.org/0000-0002-2684-6923}{\texttt{0000-0002-2684-6923}}} &
-  \makefield{\faMapMarker}{2100D Physical Science Building} \\
-  \makefield{\faEnvelope[regular]}{\href{mailto:mgrau@odu.edu}{\texttt{mgrau@odu.edu}}} &
-  \makefield{\faGoogle}{\href{https://scholar.google.com/citations?user=lnh9kdIAAAAJ}{\texttt{lnh9kdIAAAAJ}}} &
-  \makefield{}{Physics Department} \\
-  \makefield{\faGlobe}{\href{https://www.graulab.org}{www.graulab.org}} &
-  \makefield{\faGithub}{\href{https://github.com/mgrau}{\texttt{mgrau}}} &
-  \makefield{}{Old Dominion University} \\
-  % The middle cell of this row is empty; span it so the date never wraps.
-  \multicolumn{2}{@{}l}{\emph{updated \today}} & \makefield{}{Norfolk, VA 23529}\\
+  \begin{tabularx}{\linewidth}{@{}X X@{}}
+  \makefield{\faEnvelope[regular]}{\href{mailto:R.Neely@leeds.ac.uk}{\texttt{R.Neely@leeds.ac.uk}}} &
+  School of Earth, Environment and Sustainability \\
+  \makefield{\faGlobe}{\href{https://environment.leeds.ac.uk/see/staff/1447/dr-ryan-neely-iii}{University profile}} &
+  University of Leeds \\
+  \makefield{\faOrcid}{\href{https://orcid.org/0000-0003-4560-4812}{\texttt{0000-0003-4560-4812}}} &
+  National Centre for Atmospheric Science \\
+  \makefield{\faGoogle}{\href{https://scholar.google.com/citations?user=zK6Ngs0AAAAJ}{Google Scholar}} &
+  Leeds, United Kingdom \\
+  \makefield{\faGithub}{\href{https://github.com/rrniii}{\texttt{rrniii}}} &
+  \emph{updated \today} \\
   \end{tabularx}
   \egroup
+  \fi
 }
 
 \rightheader{~}

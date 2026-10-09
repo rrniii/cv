@@ -1,1 +1,9 @@
+---
+pagetitle: "Ryan R. Neely III — Publications"
+format:
+  html:
+    toc: true
+---
+
 {{< include generated/md/publications.md >}}
+{{< include sections/other_outputs.md >}}

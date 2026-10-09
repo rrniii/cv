@@ -7,14 +7,12 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,6 +20,7 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
+          version: '1.9.37'
           tinytex: true
 
       - name: Cache TinyTeX packages
@@ -35,66 +34,93 @@ jobs:
         run: |
           export PATH="$HOME/.TinyTeX/bin/$(uname -m)-linux:$PATH"
           tlmgr update --self
-          tlmgr install \
-            curve cochineal cabin inconsolata fontawesome5 simpleicons \
-            fontspec luaotfload unicode-math lualatex-math lm-math carlito tex-gyre \
+          tlmgr install curve cochineal cabin inconsolata fontawesome5 simpleicons \
+            fontspec luaotfload unicode-math lualatex-math lm-math \
             biblatex-phys biber silence relsize fancyhdr lastpage \
-            csquotes xpatch comment multirow pgf \
-            etoolbox microtype caption float bookmark xurl \
-            footnotehyper booktabs iftex parskip
+            csquotes xpatch comment multirow pgf etoolbox microtype \
+            caption float bookmark xurl footnotehyper booktabs iftex parskip
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Install uv
-        run: pip install uv
+      - name: Check Python syntax
+        run: python3 -m compileall -q scripts
 
-      - name: Cache Python venv
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-py3.12-scholarly
-          restore-keys: venv-py3.12-
-
-      - name: Install Python dependencies
+      - name: Install PDF inspection tools
         run: |
-          uv venv --clear .venv
-          uv pip install scholarly --python .venv/bin/python
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
 
-      # Quarto resolves {{< include >}} directives while enumerating project
-      # input files, which happens BEFORE pre-render scripts run. On a clean
-      # checkout generated/ does not exist yet, so the includes fail. Generate
-      # it up front; the pre-render hooks then re-run these idempotently.
-      - name: Generate sections
-        env:
-          CV_SCHOLAR_DISABLE: '1'
-        run: make generate
+      - name: Build PDF and HTML variants
+        id: render
+        run: make all
 
-      - name: Build CV
-        env:
-          CV_SCHOLAR_DISABLE: '1'
-        run: quarto render
+      - name: Verify short CV page counts
+        run: |
+          mismatched=0
+          for pages in 1 2 3; do
+            actual="$(pdfinfo "_build/cv-${pages}p.pdf" | awk '/^Pages:/ {print $2}')"
+            if [ "$actual" -ne "$pages" ]; then
+              echo "::error::cv-${pages}p.pdf has ${actual} pages; expected ${pages}."
+              mismatched=1
+            fi
+          done
+          exit "$mismatched"
 
-      # The landing page, robots.txt and portrait live in web/. The ODU CV is
-      # built and reachable by URL but deliberately not linked from the page.
-      - name: Assemble site
-        run: make site
+      - name: Upload build for download and review
+        if: always() && steps.render.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-build
+          path: _build/
+          retention-days: 14
 
-      - name: Upload PDFs to GitHub Pages
+      - name: Upload LaTeX logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-logs
+          path: '**/*.log'
+          retention-days: 7
+
+  publish:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    steps:
+      - name: Download verified build
+        uses: actions/download-artifact@v4
+        with:
+          name: cv-build
+          path: _build
+
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _build
 
       - name: Deploy to GitHub Pages
+        id: pages
         uses: actions/deploy-pages@v4
 
       - name: Publish PDFs as release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest
-          name: Latest CV
+          tag_name: cv-${{ github.sha }}
+          target_commitish: ${{ github.sha }}
+          name: Curriculum vitae
           body: "Built from commit ${{ github.sha }}"
           files: |
             _build/cv.pdf
@@ -102,11 +128,3 @@ jobs:
             _build/cv-2p.pdf
             _build/cv-1p.pdf
             _build/publications.pdf
-
-      - name: Upload LaTeX logs on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: latex-logs
-          path: "*.log"
-          retention-days: 7

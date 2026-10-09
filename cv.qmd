@@ -2,26 +2,25 @@
 format:
   html:
     toc: true
-  pdf:
-    geometry:
-      - margin=0.75in
 ---
 
-{{< include sections/education.md >}}
+{{< include sections/profile.md >}}
 {{< include sections/appointments.md >}}
-{{< include sections/teaching_condensed.md >}}
+{{< include sections/education.md >}}
+{{< include sections/research_interests.md >}}
+{{< include sections/research_highlights.md >}}
 {{< include sections/awards.md >}}
-{{< pagebreak >}}
-
-{{< include generated/md/publications.md >}}
-{{< include sections/thesis.md >}}
-{{< include sections/conference_talks.md >}}
-{{< include sections/seminar_talks.md >}}
-{{< include sections/contributed_talks.md >}}
-{{< include sections/co_authored_presentations.md >}}
+{{< include sections/teaching.md >}}
 {{< include sections/students.md >}}
 {{< include sections/dissertation_committees.md >}}
 {{< include sections/grants/awarded.md >}}
+{{< include generated/md/publications.md >}}
+{{< include sections/other_outputs.md >}}
+{{< include sections/datasets.md >}}
+{{< include sections/conference_talks.md >}}
+{{< include sections/seminar_talks.md >}}
+{{< include sections/contributed_talks.md >}}
 {{< include sections/service_academic.md >}}
 {{< include sections/service_professional.md >}}
+{{< include sections/memberships.md >}}
 {{< include sections/community_engagement.md >}}

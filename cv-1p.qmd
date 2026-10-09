@@ -1,25 +1,22 @@
 ---
 cv-latex:
+  compactheader: true
+  maxnames: 4
+  minnames: 3
   rubricafterspace: "-8pt"
   rubricspace: "-2pt"
   subrubricspace: "0pt"
 format:
   pdf:
+    fontsize: 10pt
     geometry:
       - margin=0.5in
   html:
     toc: true
 ---
 
-<!-- One-page CV: highly condensed, achievement- and metrics-focused.
-     Swap the publications include for any selection in publications/selections.json -->
-
-{{< include sections/education.md >}}
-
-{{< include sections/appointments.md >}}
-
-{{< include sections/research_highlights.md >}}
-
+{{< include sections/profile.md >}}
+{{< include sections/appointments_short.md >}}
+{{< include sections/education_short.md >}}
 {{< include sections/awards_selected.md >}}
-
 {{< include generated/md/publications_selected_top3.md >}}

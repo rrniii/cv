@@ -1,6 +1,6 @@
 <!--
 type: dated
-tex: generated/tex/education
+tex: generated/tex/education_short
 -->
 
 ## Education

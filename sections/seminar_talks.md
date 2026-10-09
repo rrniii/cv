@@ -1,18 +1,18 @@
 <!--
-type: enumerated
-date_position: end
+type: dated
+tex: generated/tex/seminar_talks
 -->
 
-## Invited Seminar Talks
+## Selected Invited Seminars
 
-- November 2024 | Searching for Symmetry Violation with Molecular Ions and Quantum Logic. Physics Colloquium, Virginia Commonwealth University, Richmond, Virginia, USA
-- October 2024 | Searching for Symmetry Violation with Molecular Ions. Triangle Quantum Computing Seminar, Raleigh, North Carolina, USA
-- November 2023 | Searching for Symmetry Violation with Molecular Ions. CQRT Seminar, University of Oklahoma, Norman, Oklahoma, USA
-- October 2023 | Searching for Symmetry Violation with Molecular Ions. William \& Mary, Williamsburg, Virginia, USA
-- June 2022 | Trapped ion quantum computing. Jefferson Lab Accelerator Seminar, Newport News, Virginia, USA
-- March 2021 | Searching for new physics with trapped molecular ions. Van Swinderen Institute, Groningen, Netherlands
-- March 2021 | Searching for new physics with trapped molecular ions. Old Dominion University, Norfolk, Virginia, USA
-- April 2020 | Precision tests of fundamental symmetry violation using trapped molecular ions. Durham University, Durham, United Kingdom
-- November 2019 | Precision tests of fundamental symmetry violation using trapped molecular ions. Heinrich Heine University Düsseldorf, Dusseldorf, Germany
-- March 2019 | Trapping Ions in an optical lattice. JILA, Boulder, CO
-- March 2019 | Trapping Ions in an optical lattice. Caltech, Pasadena, CA
+- 2025 | **72°N to 72°S: Adventures with Polar Cloud Radars**, Imperial College London and NCAS.
+- 2025 | **Innovation in Ice Sheet Monitoring**, ARIA Forecasting Tipping Points Programme Workshop, Leeds.
+- 2023 | **Classification**, SEMAFOR Workshop, Sempach, Switzerland.
+- 2023 | **Dual-Polarisation Weather Radar for Advanced Monitoring of Aerial Biodiversity**, NCAS.
+- 2021 | **Dual-Polarisation Weather Radar for Advanced Monitoring of Aerial Biodiversity**, German Aerospace Center (DLR).
+- 2018 | **ICECAPS: Integrated Characterisation of Energy, Clouds, Atmospheric State and Precipitation at Summit**, Niels Bohr Institute, Copenhagen.
+- 2018 | **Atmospheric Stamp Collecting**, NCAS Annual Conference, Manchester.
+- 2017 | **Using Polarization Lidar to Accurately Measure the Phase and Particle Orientation of Hydrometeors in Arctic Mixed-Phase Clouds**, University of Reading.
+- 2017 | **Novel Ways to See More: Polarized Active Remote Sensing**, NCAR, Boulder, and University of Newcastle.
+- 2016 | **Novel Ways to See More: Polarized Active Remote Sensing**, University of East Anglia and University of Edinburgh.
+- 2014 | **Stratospheric Aerosols and Climate Variability: The Good, The Bad, and The Ugly**, ETH Zürich.

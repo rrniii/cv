@@ -1,23 +1,20 @@
-<!-- Three-page CV for funding applications: selected publications (weighted
-     impact x recency), current & pending support, mentoring, service.
-     Swap the publications include for any selection in publications/selections.json -->
+---
+cv-latex:
+  compactheader: true
+  maxnames: 8
+  minnames: 4
+format:
+  html:
+    toc: true
+---
 
-{{< include sections/education.md >}}
-
-{{< include sections/appointments.md >}}
-
+{{< include sections/profile.md >}}
+{{< include sections/appointments_short.md >}}
+{{< include sections/education_short.md >}}
+{{< include sections/research_highlights.md >}}
 {{< include generated/md/publications_selected_funding.md >}}
-
 {{< include sections/grants/active.md >}}
-
-{{< include sections/grants/pending.md >}}
-
-{{< include sections/students_short.md >}}
-
-{{< include sections/awards.md >}}
-
+{{< include sections/awards_selected.md >}}
 {{< include sections/teaching_condensed.md >}}
-
-{{< include sections/conference_talks.md >}}
-
+{{< include sections/students_short.md >}}
 {{< include sections/service_short.md >}}

@@ -1,2 +1,0 @@
-- Find poster title and author list for Quantum Science Gordon Research Conference 2018, Stonehill College, Easton, MA. Matt attended and presented a poster; need confirmed title/authors before adding to CV.
-- Greg and Ali proceedings? (Blume / Kachwala — need venue, title, and year before adding to publications)

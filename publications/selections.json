@@ -1,44 +1,71 @@
 {
-  "_comment": "Selected-publication lists for short CV variants. Methods: 'keys' = hand-picked bib keys (edit freely); 'impact' = top N by Google Scholar citations; 'recent' = newest N; 'weighted' = citations discounted by age (halved every half_life_years). Optional 'exclude' drops keys from algorithmic selections. Each selection generates generated/md/publications_selected_<name>.md — include that file in a .qmd to use it.",
+  "_comment": "Explicit selections reflect radar instrumentation, polar observations and radar aeroecology. No citation-based ranking or unverified Google Scholar metrics are used.",
   "default": {
     "method": "keys",
-    "keys": ["kachwala2025", "araz2025", "araz2024", "zhou2024", "reiter2021"]
+    "keys": [
+      "mungee2025aerial",
+      "neely2018nxpol",
+      "neely2013capabl",
+      "guy2024p60",
+      "neely2021p42"
+    ]
   },
-  "impact": {
-    "method": "impact",
-    "count": 5
+  "top3": {
+    "method": "keys",
+    "keys": [
+      "mungee2025aerial",
+      "neely2018nxpol",
+      "neely2013capabl"
+    ]
+  },
+  "funding": {
+    "method": "keys",
+    "keys": [
+      "mungee2025aerial",
+      "neely2018nxpol",
+      "neely2013capabl",
+      "martin2026p67",
+      "hodges2024p61",
+      "guy2024p60",
+      "dufton2023p59",
+      "guy2022p53"
+    ]
   },
   "recent": {
     "method": "recent",
     "count": 5
   },
-  "balanced": {
-    "method": "weighted",
-    "count": 5,
-    "half_life_years": 5
-  },
-  "funding": {
-    "method": "weighted",
-    "count": 12,
-    "half_life_years": 5,
-    "exclude": ["ward2021", "matheny2014"]
-  },
-  "top3": {
-    "method": "weighted",
-    "count": 3,
-    "half_life_years": 5,
-    "exclude": ["ward2021", "matheny2014"]
-  },
-  "photocathodes": {
+  "polar": {
     "method": "keys",
-    "keys": ["grau2026cryogenic", "blume2026", "masters2026", "kachwala2025", "belfore2023"]
+    "keys": [
+      "guy2024p60",
+      "guy2023p57",
+      "guy2022p53",
+      "sterzinger2022p52",
+      "lopezgarcia2022p47",
+      "guy2021p46",
+      "neely2013capabl"
+    ]
   },
-  "edm": {
+  "radar": {
     "method": "keys",
-    "keys": ["zhou2024", "maison2022", "roussy2021", "maison2020", "cairncross2017", "loh2013"]
+    "keys": [
+      "dufton2025p63",
+      "dufton2023p59",
+      "wallbank2022p54",
+      "neely2021p42",
+      "neely2018nxpol"
+    ]
   },
-  "spin-boson": {
+  "aeroecology": {
     "method": "keys",
-    "keys": ["rainaldi2026", "araz2025", "araz2024", "reiter2021", "jain2020"]
+    "keys": [
+      "mungee2025aerial",
+      "matthews2025p64",
+      "lukach2024p62",
+      "hodges2024p61",
+      "lukach2022p50",
+      "addison2022p49"
+    ]
   }
 }

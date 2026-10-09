@@ -1,10 +1,10 @@
 <!--
-type: enumerated
-date_position: end
+type: dated
+tex: generated/tex/conference_talks
 -->
 
-## Invited Conference Talks
+## Selected Invited Conference Presentations
 
-- May 2017 | A precision measurement of the electron's electric dipole moment using trapped molecular ions. Precision Physics, Quantum Electrodynamics, and Fundamental Interactions, IESC Cargese, France
-- August 2016 | Measuring the electron EDM with trapped molecular ions. ECTI 2016, Arosa, Switzerland
-- June 2015 | Testing T-symmetry using trapped molecular ions. 594. WE-Heraeus-Seminar, Bad Honnef, Germany
+- 2024 | **National-scale nocturnal arthropod declines unveiled by weather radars**, 4th International Radar Aeroecology Conference, Delaware, USA.
+- 2017 | **Radar Applications in Northern Scotland: RAINS**, AMS Radar Conference, Chicago, USA.
+- 2017 | **Properties of horizontally oriented ice crystals observed by polarization lidar over Summit, Greenland**, International Laser Radar Conference, Bucharest, Romania.

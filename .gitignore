@@ -7,10 +7,8 @@ generated/
 # Generated data/stats (rebuilt by update_metrics.py)
 data/stats.*
 data/macros.tex
-# NOTE: data/gs_cache.json is deliberately TRACKED. CI builds run with
-# CV_SCHOLAR_DISABLE=1, so the committed cache is the only source of citation
-# counts there — without it, published CVs show "N/A citations" and the
-# impact/weighted publication selections silently fall back to date order.
+# Citation metrics are not used by this build.
+data/gs_cache.json
 
 # LaTeX artifacts
 *.aux

@@ -1,154 +1,98 @@
-# CV Workflow
+# Ryan R. Neely III — Curriculum vitae
 
-This project keeps CV content in simple Markdown files and renders them into LaTeX (for PDF) and HTML (for web) via a small build pipeline.
+An academic CV for the Professor of Atmospheric Physics at the University of
+Leeds and the National Centre for Atmospheric Science. The site provides a
+full CV, one-, two- and three-page summaries, and a publication list in PDF and
+HTML.
 
-## Directory Layout
+- [CV website](https://rrniii.github.io/cv/)
+- [University profile](https://environment.leeds.ac.uk/see/staff/1447/dr-ryan-neely-iii)
+- [ORCID](https://orcid.org/0000-0003-4560-4812)
+- [Google Scholar](https://scholar.google.com/citations?user=zK6Ngs0AAAAJ)
 
-- `sections/` — Source content for CV sections (Markdown). This is the primary place to edit content.
-- `generated/` — Generated LaTeX and Markdown, rebuilt on every render. Gitignored; do not edit by hand.
-- `publications/` — BibTeX files for publications.
-- `scripts/` — Build helpers and live-metrics updater.
-- `cv-*.qmd` — Quarto entry points (PDF + HTML where relevant).
+Content is adapted from the September 7, 2026 academic CV, with supporting
+publication metadata from the earlier academic CV and primary journal pages.
+The bibliography keeps the source-listed preprint separate from journal
+articles. Publication provenance is recorded in
+[data/publication_sources.json](data/publication_sources.json). This repository
+is a maintained snapshot; build dates indicate when outputs were generated.
 
-## How the Build Works
+## Edit the content
 
-1. `scripts/build_sections.py` parses the Markdown in `sections/` and generates:
-   - `generated/tex/*.tex` for LaTeX.
-2. `scripts/update_metrics.py` (optional) fetches Google Scholar stats and parses BibTeX counts into `data/stats.*`.
-3. Quarto renders QMD files to PDF/HTML using the generated LaTeX sections.
-4. `scripts/clean_artifacts.py` removes LaTeX artifacts after rendering.
+`sections/` contains the Markdown sources. `publications/published.bib` and
+`publications/submitted.bib` contain journal articles and preprints. Named
+short-CV selections live in `publications/selections.json` and use explicit
+BibTeX keys. The optional `recent` selection method orders records by date.
 
-Quarto runs steps 1, 2, and 4 automatically via `_quarto.yml` (`pre-render` and `post-render`).
-
-## Editing Content
-
-Edit the Markdown in `sections/`.
-
-### Dated Sections
+Each section starts with a metadata comment, a heading, and entries:
 
 ```markdown
 <!--
 type: dated
+tex: generated/tex/education
 -->
 
-## Teaching
+## Education
 
-### Institution
-
-- Fall 2025 | Course title
+- 2012 | **PhD, Atmospheric and Oceanic Sciences**, University of Colorado Boulder
 ```
 
-### Enumerated Sections (Descending)
+The `tex:` path must identify the generated file for that source. It is
+particularly important when short variants share a heading with full sections.
+Use `date | description` for dated sections and
+`date | amount | description` for grants. Enumerated sections use
+`type: enumerated`. Basic emphasis and Markdown HTTPS hyperlinks render in both
+formats. Escape LaTeX special characters in prose (`\%`, `\&`, `\#`, `\_`).
 
-```markdown
-<!--
-type: enumerated
-date_position: end
--->
+Contact details are in `_quarto.yml` for HTML and `preamble.tex` for PDF. The
+landing page is `web/index.html`; the portrait is `web/photo.jpg`. The PDF
+preamble and publication renderer recognise the BibTeX name
+`Neely, III, R. R.` and bold Ryan's name while preserving the suffix.
 
-## Invited Conference Talks
+## Build
 
-- May 2017 | Talk title. Venue
+Requirements: Python 3.10 or later, Quarto, and a TeX Live/TinyTeX installation
+with LuaLaTeX and Biber for PDFs. Python scripts use the standard library; no
+virtual environment or Google Scholar scraper is required.
+
+```sh
+make all         # generate sources, render all PDFs/HTML, assemble landing page
+make html        # HTML only; does not require TeX
+make pdf         # PDF only
+make 1p          # one-page PDF and HTML
+make cv-pdf      # full CV PDF
 ```
 
-### Grants (Number + Date + Amount)
+`PYTHON` and `QUARTO` can be overridden, for example
+`make PYTHON=/path/to/python3 QUARTO=/path/to/quarto html`.
 
-```markdown
-<!--
-type: grants
--->
+Run `make generate` before calling `quarto render` directly on a clean checkout:
+Quarto resolves includes before its pre-render hooks. Outputs go into `_build/`;
+`generated/` and `data/stats.json`/`data/macros.tex` are rebuilt automatically and
+must not be edited by hand. `make clean` removes `_build/`.
 
-## Grants Awarded
+The pipeline does not fetch citation metrics or calculate funding/student
+aggregates. Publication counts describe the local bibliography only. Scholar
+links are provided for readers who want the live profile.
 
-- September 2024 -- December 2026 | \$472,000 | _Grant title_ (Agency). Role: Co-PI (50\%).
-```
+## Deployment and review
 
-The `## Heading` is required — it is what the Quarto filter keys on to find the
-section and map it to its generated `.tex` file. Escape LaTeX specials (`\$`, `\%`,
-`\&`). Add `tex: <path>` to the metadata comment when the source filename differs
-from the slugified heading (e.g. `teaching_condensed.md` → `## Teaching`).
+GitHub Actions builds PDF and HTML on pull requests, main pushes and manual
+runs. Every successful build produces a downloadable `cv-build` artifact.
+The build checks that the short PDFs contain exactly one, two and three pages;
+rendered files remain downloadable for review if that check fails.
+Only main pushes deploy GitHub Pages and create a PDF
+release tagged with the source commit. Pull requests and manual runs only build. Configure
+repository Pages to use GitHub Actions.
 
-## Quarto Builds
+Before publishing content changes, check source accuracy, render the HTML and
+inspect PDF layout and the advertised short-variant page limits. The short
+PDFs use a compact contact header and shortened author lists; the full CV
+retains complete author lists.
 
-Quarto entry points:
+## Template provenance
 
-- `cv.qmd` — Canonical CV entry point. The body is pure section includes; a format-specific filter turns that into the HTML template or PDF `curve`/`\makerubric` output.
-- `cv-odu.qmd` — Full CV for ODU workflow (PDF).
-- `cv-1p.qmd` — 1-page CV (PDF).
-- `cv-2p.qmd` — 2-page CV (PDF).
-- `cv-3p.qmd` — 3-page CV (PDF).
-- `cv-full.qmd` — PDF-only wrapper using the same pure section-include body pattern.
-- `cv-web.qmd` — HTML-only wrapper using the same pure section-include body pattern.
-
-Render a single target:
-
-```bash
-quarto render cv.qmd --to pdf
-quarto render cv.qmd --to html
-```
-
-Render all QMD files:
-
-```bash
-quarto render
-```
-
-## LaTeX Builds (Makefile)
-
-Legacy LaTeX workflows are still supported:
-
-```bash
-make full
-make web
-make 3p
-make 2p
-make 1p
-```
-
-The Makefile runs `scripts/build_sections.py` first to keep LaTeX sections up to date.
-
-## Live Metrics (Google Scholar)
-
-`update_metrics.py` reads BibTeX counts and fetches Google Scholar stats using `scholarly`.
-
-Environment variables:
-
-- `CV_SCHOLAR_USER` (default: `lnh9kdIAAAAJ`)
-- `CV_SCHOLAR_REFRESH` (`1/true/yes` forces refresh)
-- `CV_SCHOLAR_TTL_HOURS` (cache TTL, default 168)
-- `CV_SCHOLAR_TIMEOUT_SECONDS` (default 20)
-- `CV_SCHOLAR_DISABLE` (`1/true/yes` to skip scholar fetch)
-
-Cache location: `data/gs_cache.json`
-
-## Python Dependencies (via uv)
-
-Create the virtual environment:
-
-```bash
-uv venv .venv
-```
-
-Install required packages:
-
-```bash
-uv pip install scholarly
-```
-
-## Other Requirements
-
-- Quarto (for `.qmd` rendering)
-- TeX Live (for PDF builds) with `latexmk`
-
-## Formatting Notes
-
-- Markdown supports `*italic*` and `**bold**` inline formatting.
-- Use `|` to separate date and text in dated sections.
-- Section metadata lives in a top HTML comment:
-  ```markdown
-  <!--
-  type: dated
-  date_position: end
-  -->
-  ```
-- For LaTeX-specific symbols in Markdown, keep the LaTeX escapes (e.g., `\%`, `\&`, `\$`).
+Forked from [mgrau/cv](https://github.com/mgrau/cv), preserving its Quarto,
+Markdown and CurVe styling pipeline. The underlying LaTeX styling credits
+LianTze Lim in `settings.sty`. No additional licence is asserted by this fork;
+the upstream repository does not supply a licence file.

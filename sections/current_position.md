@@ -1,7 +1,8 @@
 <!--
 type: dated
+tex: generated/tex/current_position
 -->
 
 ## Current Position
 
-- December 2021 -- | **Assistant Professor**, Old Dominion University, Norfolk, VA
+- 2026 -- | **Professor of Atmospheric Physics**, University of Leeds and National Centre for Atmospheric Science (NCAS)

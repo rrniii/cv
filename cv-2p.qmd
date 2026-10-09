@@ -1,25 +1,21 @@
 ---
 cv-latex:
+  compactheader: true
+  maxnames: 6
+  minnames: 3
   rubricafterspace: "-6pt"
   rubricspace: "0pt"
+format:
+  html:
+    toc: true
 ---
 
-<!-- Two-page abbreviated CV (SCHEV Outstanding Faculty Award format: 2-page max).
-     Balanced across Boyer's four areas: teaching, discovery, integration, service.
-     Swap the publications include for any selection in publications/selections.json -->
-
-{{< include sections/education.md >}}
-
-{{< include sections/appointments.md >}}
-
+{{< include sections/profile.md >}}
+{{< include sections/appointments_short.md >}}
+{{< include sections/education_short.md >}}
 {{< include generated/md/publications_selected_default.md >}}
-
 {{< include sections/grants_short.md >}}
-
-{{< include sections/awards.md >}}
-
+{{< include sections/awards_selected.md >}}
 {{< include sections/teaching_condensed.md >}}
-
 {{< include sections/students_short.md >}}
-
 {{< include sections/service_short.md >}}

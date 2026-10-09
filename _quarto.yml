@@ -3,18 +3,16 @@ project:
   output-dir: _build
   render:
     - cv.qmd
-    - cv-odu.qmd
     - cv-1p.qmd
     - cv-2p.qmd
     - cv-3p.qmd
     - publications.qmd
   pre-render:
-    - "python3 scripts/prepare_texlive.py"
-    - ".venv/bin/python scripts/build_sections.py"
-    - ".venv/bin/python scripts/update_metrics.py"
+    - "python3 scripts/build_sections.py"
+    - "python3 scripts/update_metrics.py"
     - "python3 scripts/render_publications_web.py"
   post-render:
-    - ".venv/bin/python scripts/clean_artifacts.py"
+    - "python3 scripts/clean_artifacts.py"
 
 execute:
   enabled: false
@@ -22,34 +20,35 @@ execute:
 filters:
   - filters/cv_templates.lua
 
-author: "Matt Grau"
+author: "Ryan R. Neely III"
+pagetitle: "Ryan R. Neely III — Curriculum vitae"
 cv:
-  phone: "(757) 683-5827"
-  email: "mgrau@odu.edu"
-  website: "www.graulab.org"
-  orcid: "0000-0002-2684-6923"
-  scholar: "lnh9kdIAAAAJ"
-  github: "mgrau"
+  email: "R.Neely@leeds.ac.uk"
+  website: "https://environment.leeds.ac.uk/see/staff/1447/dr-ryan-neely-iii"
+  website-label: "University profile"
+  orcid: "0000-0003-4560-4812"
+  scholar: "zK6Ngs0AAAAJ"
+  github: "rrniii"
   address:
-    - "2100D Physical Science Building"
-    - "Physics Department"
-    - "Old Dominion University"
-    - "Norfolk, VA 23529"
+    - "School of Earth, Environment and Sustainability"
+    - "University of Leeds"
+    - "National Centre for Atmospheric Science"
+    - "Leeds, United Kingdom"
 
 format:
   pdf:
     documentclass: curve
     fontsize: 11pt
     classoption:
-      - letterpaper
+      - a4paper
       - skipsamekey
       - english
-    pdf-engine: latexmk
+    pdf-engine: lualatex
     latex-max-runs: 4
     cite-method: biblatex
     include-in-header: preamble.tex
     geometry:
-      - letterpaper
+      - a4paper
       - margin=0.75in
   html:
     theme: none

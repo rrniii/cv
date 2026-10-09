@@ -205,11 +205,11 @@ local function shift_headers(blocks)
   return shifted
 end
 
--- Grant entries carry ODU-only detail: the credit share after the role
+-- Grant entries can carry extra detail: the credit share after the role
 -- ("Co-PI (50%).") and a trailing "Investigators: ..." sentence. The PDF build
 -- gets brief .tex files from build_sections.py; the HTML build reads the
 -- source Markdown, so the same detail is dropped here unless the section is
--- marked "detail: full" (the generated _full sections the ODU document uses).
+-- marked "detail: full" (the generated _full sections).
 local function strip_grant_detail(inlines)
   local out = {}
   for _, el in ipairs(inlines) do
@@ -268,6 +268,7 @@ local function html_header(meta)
   local email = meta_string(cv.email, "")
   local email_href = derived_href("email", email)
   local website = meta_string(cv.website, "")
+  local website_label = meta_string(cv["website-label"], website)
   local website_href = derived_href("website", website)
   local orcid = meta_string(cv.orcid, "")
   local orcid_href = derived_href("orcid", orcid)
@@ -286,12 +287,25 @@ local function html_header(meta)
   local generated = generated_date()
 
   local function link(href, class_name, label)
+    if href == "" or label == "" then
+      return ""
+    end
     return string.format(
       '<a href="%s" class="%s">%s</a>',
       escape_html(href),
       class_name,
       escape_html(label)
     )
+  end
+
+  local function stack(items)
+    local present = {}
+    for _, item in ipairs(items) do
+      if item ~= "" then
+        table.insert(present, item)
+      end
+    end
+    return table.concat(present, "<br>")
   end
 
   return table.concat({
@@ -312,15 +326,19 @@ local function html_header(meta)
     '</div>',
     '<div class="cv-header-grid">',
     '<div class="cv-header__column"><div class="cv-header__stack"><p>',
-    link(phone_href, "cv-header-link cv-header-link--phone", phone) .. '<br>',
-    link(email_href, "cv-header-link cv-header-link--email", email) .. '<br>',
-    link(website_href, "cv-header-link cv-header-link--web", website) .. '<br>',
-    '<span class="cv-header-date">Generated ' .. escape_html(generated) .. '</span>',
+    stack({
+      link(phone_href, "cv-header-link cv-header-link--phone", phone),
+      link(email_href, "cv-header-link cv-header-link--email", email),
+      link(website_href, "cv-header-link cv-header-link--web", website_label),
+      '<span class="cv-header-date">Generated ' .. escape_html(generated) .. '</span>',
+    }),
     '</p></div></div>',
     '<div class="cv-header__column"><div class="cv-header__stack"><p>',
-    link(orcid_href, "cv-header-link cv-header-link--orcid", orcid) .. '<br>',
-    link(scholar_href, "cv-header-link cv-header-link--scholar", scholar) .. '<br>',
-    link(github_href, "cv-header-link cv-header-link--github", github),
+    stack({
+      link(orcid_href, "cv-header-link cv-header-link--orcid", "ORCID"),
+      link(scholar_href, "cv-header-link cv-header-link--scholar", "Google Scholar"),
+      link(github_href, "cv-header-link cv-header-link--github", github),
+    }),
     '</p></div></div>',
     '<div class="cv-header__column"><div class="cv-address">' .. address .. '</div></div>',
     '</div>',
@@ -419,10 +437,14 @@ local function render_latex(doc)
   local sections = collect_sections(doc.blocks)
   local blocks = {}
 
-  -- A typography preset must precede \makeheaders so the name block uses it.
-  local typography = meta_string(cv_latex.typography, "")
-  if typography ~= "" then
-    table.insert(blocks, pandoc.RawBlock("latex", "\\CVtypography{" .. typography .. "}"))
+  if meta_string(cv_latex.compactheader, "") == "true" then
+    table.insert(blocks, pandoc.RawBlock("latex", "\\CVcompactheadertrue"))
+  end
+  for _, key in ipairs({"maxnames", "minnames"}) do
+    local value = meta_string(cv_latex[key], "")
+    if value:match("^%d+$") then
+      table.insert(blocks, pandoc.RawBlock("latex", "\\renewcommand{\\CVbib" .. key .. "}{" .. value .. "}"))
+    end
   end
   table.insert(blocks, pandoc.RawBlock("latex", "\\makeheaders[c]"))
 

@@ -5,5 +5,6 @@ tex: generated/tex/memberships
 
 ## Professional Memberships
 
-- | American Physical Society (APS)
-- | APS Group on Precision Measurement and Fundamental Constants (GPMFC)
+- 2014 -- | **Fellow**, Royal Meteorological Society.
+- 2014 -- | European Geosciences Union.
+- 2008 -- | American Meteorological Society and American Geophysical Union.

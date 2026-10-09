@@ -1,26 +1,11 @@
-%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own
 \makerubrichead{Publications}
-(\CVcitations{} citations, h-index \CVhindex)%
-\iftoggle{studentmarkers}{ --- \textsuperscript{\textdagger}\emph{indicates graduate and \textsuperscript{\textdaggerdbl}undergraduate student co-authors}}{}
 
-%% Assuming you've already given \addbibresource{own-bib.bib} in the main doc. Right? Right???
-
-
-%% If you just want everything in one list
-% \printbibliography[heading={none}]
-
-\begin{refsection}[submitted]
+\begin{refsection}[publications/submitted.bib]
 \nocite{*}
-\printbibliography[heading={subbibliography},title={Submitted Manuscripts},resetnumbers=true]
+\printbibliography[heading={subbibliography},title={Preprints},resetnumbers=true]
 \end{refsection}
 
-\begin{refsection}[published]
+\begin{refsection}[publications/published.bib]
 \nocite{*}
-\printbibliography[heading={subbibliography},title={Peer Reviewed Articles},resetnumbers=true]
+\printbibliography[heading={subbibliography},title={Peer-Reviewed Journal Articles},resetnumbers=true]
 \end{refsection}
-
-% \printbibliography[heading={subbibliography},title={Submitted Manuscripts},type=misc]
-
-% \printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
-
-% \printbibliography[heading={subbibliography},title={Books and Chapters},filter={booksandchapters}]

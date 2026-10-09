@@ -191,6 +191,17 @@ def parse_markdown(body: str, fm: dict) -> Tuple[str, List[SectionGroup]]:
 
 
 def md_inline_to_latex(text: str) -> str:
+    links: list[str] = []
+
+    def protect_link(match: re.Match[str]) -> str:
+        label, url = match.groups()
+        url = url.replace("%", r"\%").replace("#", r"\#").replace("&", r"\&")
+        links.append(rf"\href{{{url}}}{{{label}}}")
+        return f"CVLINKTOKEN{len(links) - 1}END"
+
+    # Protect URLs from the emphasis conversion, particularly underscores in
+    # DOI paths. Markdown hyperlinks remain clickable in the PDF.
+    text = re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+)\)", protect_link, text)
     # Convert basic markdown emphasis to LaTeX, leaving other LaTeX intact.
     text = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", text)
     # Single-asterisk italics after bold conversion.
@@ -199,15 +210,17 @@ def md_inline_to_latex(text: str) -> str:
     text = re.sub(r"(?<![$\\])_(?!\s)(.+?)(?<!\s)_(?!_)", r"\\emph{\1}", text)
     # Line breaks become paragraph breaks.
     text = text.replace("\n", "\\par\n")
+    for index, link in enumerate(links):
+        text = text.replace(f"CVLINKTOKEN{index}END", link)
     return text
 
 
 
-# ODU-only grant detail: the credit share written after the role and the
+# Detailed grant entries: the credit share written after the role and the
 # trailing "Investigators: ..." sentence (by convention the last sentence of an
 # entry). A grants section renders WITHOUT them under its own name, so the
 # ordinary CV variants show less detail; a "_full" md+tex pair keeps them for
-# the ODU document, which includes those instead.
+# any document that includes those instead.
 GRANT_ROLE_SHARE_RE = re.compile(r"(Role:[^.(]*?)\s*\(\d+\s*\\?%\)")
 GRANT_INVESTIGATORS_RE = re.compile(r"\s*Investigators:.*\Z", re.S)
 
@@ -243,7 +256,7 @@ GRANT_INVESTIGATORS_LABEL_RE = re.compile(r"Investigators:\s*")
 
 
 def full_grant_item(item: str) -> str:
-    """The source keeps the "Investigators:" label as the marker for the ODU-only
+    """The source keeps the "Investigators:" label as the marker for the detailed
     detail; the rendered full entry drops the word, since the parenthetical
     roles already identify the list."""
     return GRANT_INVESTIGATORS_LABEL_RE.sub("", item)

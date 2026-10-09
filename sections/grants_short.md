@@ -1,15 +1,12 @@
 <!--
 type: grants
-postamble: |
-  \vspace{0.3em}
-  \noindent\textit{Total: \CVgranttotal{}+ in total project funding across \CVgrantsawarded{} awards}
+tex: generated/tex/grants_short
 -->
 
-## Selected Grants
+## Selected Funded Programmes
 
-- 2026 -- 2027 | \$750,000 | *AI-Enabled Digital Twin for Scalable Injector Optimization and Control* (DOE). Role: Senior Personnel (11\%).
-- 2026 -- 2028 | \$715,000 | *High Performance GaAs-based Spin-Polarized Electron Photocathodes* (DOE). Role: Co-PI (50\%).
-- 2024 -- 2026 | \$529,000 | *Fabrication of Spin Polarized Electron Sources* (DOE). Role: Co-PI (50\%).
-- 2024 -- 2026 | user access | *Hybrid Quantum Computation on QSCOUT* (Sandia). Role: PI.
-- 2022 -- 2024 | \$359,000 | *Enhancing the Design of Photocathodes* (DOE). Role: Co-PI (30\%).
-- 2020 -- 2022 | \$200,000 | *Photocathodes with 90\% Polarization* (DOE). Role: Co-PI (8\%).
+- 2025 -- 2027 | £2.7m | **GAMB2LE** (ARIA); Co-PI with Heather Guy and Sarah Barr.
+- 2023 -- 2027 | £1.875m | **WOEST** (NERC); PI; six-organisation programme.
+- 2024 -- 2028 | £750k | **Next-Generation Cloud Radar for the UK Community** (NERC); PI.
+- 2022 -- 2025 | £3.08m | **ICECAPS-MELT** (NSF/NERC); UK PI; whole-programme value.
+- 2019 -- 2021 | £798k | **BioDAR** (NERC); Co-Investigator and radar lead; whole-programme value.

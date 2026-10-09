@@ -1,0 +1,595 @@
+{
+  "bibliography_basis": "September 7, 2026 academic CV; source-listed preprint kept separately. No aggregate current publication total is asserted.",
+  "records": [
+    {
+      "key": "sledd2026firn",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 133,
+      "source_number": 68,
+      "kind": "preprint",
+      "doi": "10.5194/egusphere-2026-1842"
+    },
+    {
+      "key": "martin2026p67",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 134,
+      "source_number": 67,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-19-3511-2026"
+    },
+    {
+      "key": "miller2026p66",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 135,
+      "source_number": 66,
+      "kind": "journal_article",
+      "doi": "10.1002/wea.70079"
+    },
+    {
+      "key": "mungee2025aerial",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 137,
+      "source_number": 65,
+      "kind": "journal_article",
+      "doi": "10.1111/gcb.70425",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "matthews2025p64",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 138,
+      "source_number": 64,
+      "kind": "journal_article",
+      "doi": "10.1002/ecs2.70419"
+    },
+    {
+      "key": "dufton2025p63",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 139,
+      "source_number": 63,
+      "kind": "journal_article",
+      "doi": "10.1002/met.70070"
+    },
+    {
+      "key": "lukach2024p62",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 141,
+      "source_number": 62,
+      "kind": "journal_article",
+      "doi": "10.1016/j.ecoinf.2024.102901",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "hodges2024p61",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 142,
+      "source_number": 61,
+      "kind": "journal_article",
+      "doi": "10.3390/rs16234388"
+    },
+    {
+      "key": "guy2024p60",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 143,
+      "source_number": 60,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-24-11103-2024"
+    },
+    {
+      "key": "dufton2023p59",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 145,
+      "source_number": 59,
+      "kind": "journal_article",
+      "doi": "10.3390/rs15245637"
+    },
+    {
+      "key": "barr2023p58",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 146,
+      "source_number": 58,
+      "kind": "journal_article",
+      "doi": "10.1126/sciadv.adg3708"
+    },
+    {
+      "key": "guy2023p57",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 147,
+      "source_number": 57,
+      "kind": "journal_article",
+      "doi": "10.1029/2023JD038718",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "mccusker2023p56",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 148,
+      "source_number": 56,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-23-4819-2023",
+      "author_source": "https://acp.copernicus.org/articles/23/4819/2023/",
+      "metadata_verification": "Primary journal page confirms September 7 title; fuller initials supplied for McCusker, Day and Brooks."
+    },
+    {
+      "key": "peatman2023p55",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 149,
+      "source_number": 55,
+      "kind": "journal_article",
+      "doi": "10.1175/MWR-D-22-0322.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "wallbank2022p54",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 151,
+      "source_number": 54,
+      "kind": "journal_article",
+      "doi": "10.1016/j.jhydrol.2022.128311",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "guy2022p53",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 152,
+      "source_number": 53,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-15-5095-2022"
+    },
+    {
+      "key": "sterzinger2022p52",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 153,
+      "source_number": 52,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-22-8973-2022"
+    },
+    {
+      "key": "coney2022p51",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 154,
+      "source_number": 51,
+      "kind": "journal_article",
+      "doi": "10.1002/met.2075"
+    },
+    {
+      "key": "lukach2022p50",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 155,
+      "source_number": 50,
+      "kind": "journal_article",
+      "doi": "10.1002/rse2.270",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "addison2022p49",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 156,
+      "source_number": 49,
+      "kind": "journal_article",
+      "doi": "10.3390/rs14061494",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "zeng2022p48",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 157,
+      "source_number": 48,
+      "kind": "journal_article",
+      "doi": "10.1175/BAMS-D-21-0039.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "lopezgarcia2022p47",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 158,
+      "source_number": 47,
+      "kind": "journal_article",
+      "doi": "10.1525/elementa.2022.00063"
+    },
+    {
+      "key": "guy2021p46",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 160,
+      "source_number": 46,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-21-15351-2021",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "pickering2021p45",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 161,
+      "source_number": 45,
+      "kind": "journal_article",
+      "doi": "10.1175/JHM-D-20-0172.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "pickering2021p44",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 162,
+      "source_number": 44,
+      "kind": "journal_article",
+      "doi": "10.1175/JHM-D-20-0094.1"
+    },
+    {
+      "key": "lukach2021p43",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 163,
+      "source_number": 43,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-14-1075-2021",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2021p42",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 164,
+      "source_number": 42,
+      "kind": "journal_article",
+      "doi": "10.1175/JHM-D-19-0184.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "vullers2021p41",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 165,
+      "source_number": 41,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-21-289-2021",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "lin2020p40",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 167,
+      "source_number": 40,
+      "kind": "journal_article",
+      "doi": "10.1175/JHM-D-19-0085.1"
+    },
+    {
+      "key": "stillwell2019p39",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 169,
+      "source_number": 39,
+      "kind": "journal_article",
+      "doi": "10.1029/2018JD028963",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "pickering2019p38",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 170,
+      "source_number": 38,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-12-5845-2019"
+    },
+    {
+      "key": "zambri2019p37",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 171,
+      "source_number": 37,
+      "kind": "journal_article",
+      "doi": "10.1029/2019JD031111",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2018nxpol",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 173,
+      "source_number": 36,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-11-6481-2018",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "plummer2018p35",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 174,
+      "source_number": 35,
+      "kind": "journal_article",
+      "doi": "10.1175/JAMC-D-17-0134.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "black2018p34",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 175,
+      "source_number": 34,
+      "kind": "journal_article",
+      "doi": "10.1038/s41561-018-0261-y",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "wilka2018p33",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 176,
+      "source_number": 33,
+      "kind": "journal_article",
+      "doi": "10.1029/2018GL078596",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "timmreck2018p32",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 177,
+      "source_number": 32,
+      "kind": "journal_article",
+      "doi": "10.5194/gmd-11-2581-2018",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "price2018p31",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 178,
+      "source_number": 31,
+      "kind": "journal_article",
+      "doi": "10.1002/2017JD027560",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "stillwell2018p30",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 179,
+      "source_number": 30,
+      "kind": "journal_article",
+      "doi": "10.5194/amt-11-835-2018"
+    },
+    {
+      "key": "stone2017p29",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 181,
+      "source_number": 29,
+      "kind": "journal_article",
+      "doi": "10.1002/2017JD026987",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "goerke2017p28",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 182,
+      "source_number": 28,
+      "kind": "journal_article",
+      "doi": "10.1364/AO.56.00G188",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "stillwell2017p27",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 183,
+      "source_number": 27,
+      "kind": "journal_article",
+      "doi": "10.2351/1.4977483"
+    },
+    {
+      "key": "ivy2017p26",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 184,
+      "source_number": 26,
+      "kind": "journal_article",
+      "doi": "10.1002/2016GL071925",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "solomon2016p25",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 186,
+      "source_number": 25,
+      "kind": "journal_article",
+      "doi": "10.1002/2016GL071778",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2016p24",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 187,
+      "source_number": 24,
+      "kind": "journal_article",
+      "doi": "10.5194/gmd-9-2459-2016"
+    },
+    {
+      "key": "solomon2016p23",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 188,
+      "source_number": 23,
+      "kind": "journal_article",
+      "doi": "10.1126/science.aae0061"
+    },
+    {
+      "key": "tilmes2016p22",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 189,
+      "source_number": 22,
+      "kind": "journal_article",
+      "doi": "10.5194/gmd-9-1853-2016",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "kremser2016p21",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 190,
+      "source_number": 21,
+      "kind": "journal_article",
+      "doi": "10.1002/2015RG000511",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "mills2016p20",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 191,
+      "source_number": 20,
+      "kind": "journal_article",
+      "doi": "10.1002/2015JD024290",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "xia2016p19",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 192,
+      "source_number": 19,
+      "kind": "journal_article",
+      "doi": "10.5194/acp-16-1479-2016"
+    },
+    {
+      "key": "murray2015p18",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 194,
+      "source_number": 18,
+      "kind": "journal_article",
+      "doi": "10.1175/BAMS-D-13-00128.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "yu2015p17",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 195,
+      "source_number": 17,
+      "kind": "journal_article",
+      "doi": "10.1002/2014MS000421",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "black2015p16",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 196,
+      "source_number": 16,
+      "kind": "journal_article",
+      "doi": "10.1130/G36514.1"
+    },
+    {
+      "key": "yu2015p15",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 197,
+      "source_number": 15,
+      "kind": "journal_article",
+      "doi": "10.1002/2015GL063181"
+    },
+    {
+      "key": "neely2014p14",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 199,
+      "source_number": 14,
+      "kind": "journal_article",
+      "doi": "10.1002/2014GL061627",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "ridley2014p13",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 200,
+      "source_number": 13,
+      "kind": "journal_article",
+      "doi": "10.1002/2014GL061541",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "smith2014p12",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 201,
+      "source_number": 12,
+      "kind": "journal_article",
+      "doi": "10.1002/2014MS000346"
+    },
+    {
+      "key": "oltmans2014p11",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 202,
+      "source_number": 11,
+      "kind": "journal_article",
+      "doi": "10.12952/journal.elementa.000024",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2014p10",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 203,
+      "source_number": 10,
+      "kind": "journal_article",
+      "doi": "10.1002/2013JD020578",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "baumgaertner2013p9",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 205,
+      "source_number": 9,
+      "kind": "journal_article",
+      "doi": "10.1002/jgrd.50725"
+    },
+    {
+      "key": "neely2013capabl",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 206,
+      "source_number": 8,
+      "kind": "journal_article",
+      "doi": "10.1175/JTECH-D-12-00101.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2013p7",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 207,
+      "source_number": 7,
+      "kind": "journal_article",
+      "doi": "10.1002/grl.50263",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "shupe2013p6",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 208,
+      "source_number": 6,
+      "kind": "journal_article",
+      "doi": "10.1175/BAMS-D-11-00249.1",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2011p5",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 210,
+      "source_number": 5,
+      "kind": "journal_article",
+      "doi": "10.1029/2011GL049865",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "neely2011p4",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 211,
+      "source_number": 4,
+      "kind": "journal_article",
+      "doi": "10.1175/JTECH-D-10-05021.1"
+    },
+    {
+      "key": "solomon2011p3",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 212,
+      "source_number": 3,
+      "kind": "journal_article",
+      "doi": "10.1126/science.1206027",
+      "author_source": "Author-provided CV (full author details)"
+    },
+    {
+      "key": "hofmann2009p2",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 214,
+      "source_number": 2,
+      "kind": "journal_article",
+      "doi": "10.1029/2009GL039008"
+    },
+    {
+      "key": "schnell2009p1",
+      "source": "Author-provided academic CV, September 2026",
+      "source_paragraph": 215,
+      "source_number": 1,
+      "kind": "journal_article",
+      "doi": "10.1038/ngeo415",
+      "author_source": "Author-provided CV (full author details)"
+    }
+  ],
+  "notes": [
+    "Full author lists come directly from the source CVs, with latest-source explicit names taking precedence.",
+    "McCusker (2023) title and fuller author initials are verified against the primary Atmospheric Chemistry and Physics journal page."
+  ]
+}

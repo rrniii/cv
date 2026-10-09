@@ -1,33 +1,15 @@
 <!--
 type: dated
+tex: generated/tex/service_professional
 -->
 
 ## Professional Service
 
-### Conference and Program Service
-
-- June 2026 | Session Chair: Molecules at the Frontiers of Quantum Science, DAMOP 2026, Providence, Rhode Island
-- 2025 | IEEE Quantum Computing and Engineering QTEM Program Committee (QEC25)
-- April 2025 | ODU GSGA Conference Judge
-- June 2023 | Session Chair: Dipolar BECs, DAMOP 2023, Spokane, Washington
-
-### Proposal Review
-
-- May 2026 | European Research Council
-- 2025 | DOE, NSF, Research Corporation
-- 2024 | NSF
-- 2024 | National Science Centre Poland (PRELUDIUM)
-- 2023 | AFOSR
-- 2021 | French National Research Agency
-
-<!-- One line per journal, not per review: a repeat review appends a year to an
-     existing line, a new journal adds one line. -->
-
-### Journal Referee
-
-- 2023, 2025, 2026 | Journal of Quantitative Spectroscopy and Radiative Transfer
-- 2019 | New Journal of Physics
-- 2017 -- 2019 | Atoms
-- 2017 | Optics Express
-- 2017 | The European Physical Journal
-- 2016 | Applied Physics B
+- 2026 -- | **Steering Committee**, UK Arctic and Antarctic Partnership (UKAAP).
+- 2026 | **Invited panel reviewer**, German Research Foundation Priority Programme on the High Altitude and Long Range Research Aircraft (HALO).
+- 2025 | **Co-Host**, UK Atmospheric Radar Community Meeting, NCAS, Leeds.
+- 2025 | **Invited reviewer**, proposed new edition of Radar Meteorology: A First Course.
+- 2022 -- 2024 | **Scientific Committee**, SEMAFOR; radar networks, biological migration, data analysis and forecasting.
+- 2018 -- 2020 | **Chair**, UK Inter-Agency Committee on the Hydrological Use of Weather Radar; member, 2015--2018.
+- 2017 -- | **Associate Editor**, Atmospheric Science Letters.
+- 2012 -- | **Journal and funder reviewer**: Nature, Science, Nature Geoscience, atmospheric measurement and meteorology journals, US NSF and Swiss NSF.

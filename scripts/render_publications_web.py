@@ -162,21 +162,39 @@ def normalize_name(name: str) -> str:
 
 def format_author_name(name: str) -> str:
     name = strip_tex_wrappers(name).strip()
+    suffix = ""
     if "," in name:
-        family, given = [part.strip() for part in name.split(",", 1)]
+        parts = [part.strip() for part in name.split(",")]
+        family = parts[0]
+        if len(parts) >= 3:
+            suffix, given = parts[1], parts[2]
+        else:
+            given = parts[1]
     else:
         parts = name.split()
         if not parts:
             return ""
+        if parts[-1].rstrip(".") in {"II", "III", "IV", "Jr", "Sr"}:
+            suffix = parts.pop()
         family = parts[-1]
         given = " ".join(parts[:-1])
 
-    match = re.search(r"[A-Za-z]", given)
-    initial = match.group(0).upper() if match else ""
-    formatted = f"{initial}. {family}".strip() if initial else family
+    # Handle common exports alongside BibTeX's "Neely, III, Ryan R." form.
+    for field in ("family", "given"):
+        value = family if field == "family" else given
+        match = re.search(r"\s+(II|III|IV|Jr\.?|Sr\.?)$", value)
+        if match:
+            suffix = suffix or match.group(1)
+            value = value[:match.start()]
+            if field == "family":
+                family = value
+            else:
+                given = value
+    initials = [part[0].upper() + "." for part in re.findall(r"[A-Za-zÀ-ÿ]+", given)]
+    formatted = " ".join(initials + [family] + ([suffix] if suffix else []))
 
     normalized_family = re.sub(r"[^a-z]", "", family.lower())
-    if normalized_family == "grau" and initial == "M":
+    if normalized_family == "neely" and initials and initials[0] == "R.":
         return f"**{formatted}**"
     return formatted
 
@@ -311,89 +329,22 @@ def load_stats() -> dict:
 
 
 def metrics_line(stats: dict) -> str:
-    scholar = stats.get("scholar") or {}
-    bits: list[str] = []
-    citations = scholar.get("citedby")
-    h_index = scholar.get("h_index")
-    if citations is not None:
-        bits.append(f"{citations:,} citations")
-    if h_index is not None:
-        bits.append(f"h-index {h_index}")
-    return f"*{', '.join(bits)}*" if bits else ""
+    published = (stats.get("publications") or {}).get("published")
+    return f"*{published} peer-reviewed publications in this bibliography*" if published is not None else ""
 
 
-def normalize_title(title: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", strip_tex_wrappers(title).lower())
-
-
-def load_scholar_citations() -> dict[str, int]:
-    """Map normalized publication title -> citation count from the Scholar cache."""
-    cache_path = DATA_DIR / "gs_cache.json"
-    if not cache_path.exists():
-        return {}
-    try:
-        cache = json.loads(cache_path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-    citations: dict[str, int] = {}
-    for pub in (cache.get("data") or {}).get("publications", []) or []:
-        title = pub.get("title")
-        if title:
-            citations[normalize_title(title)] = int(pub.get("citations", 0) or 0)
-    return citations
-
-
-def entry_citations(entry: BibEntry, citations: dict[str, int]) -> int:
-    return citations.get(normalize_title(entry.fields.get("title", "")), 0)
-
-
-def entry_year(entry: BibEntry) -> int:
-    try:
-        return int(entry.fields.get("year", "0"))
-    except ValueError:
-        return 0
-
-
-def select_entries(
-    spec: dict, entries: list[BibEntry], citations: dict[str, int]
-) -> list[BibEntry]:
-    from datetime import date
-
+def select_entries(spec: dict, entries: list[BibEntry]) -> list[BibEntry]:
+    """Select explicitly named or recent entries without citation-cache input."""
     method = spec.get("method", "keys")
     count = int(spec.get("count", 5))
     excluded = set(spec.get("exclude", []))
     entries = [e for e in entries if e.key not in excluded]
-
     if method == "keys":
         key_set = set(spec.get("keys", []))
         return [e for e in entries if e.key in key_set]
-
-    if method in {"impact", "weighted"} and not citations:
-        # Without citation data these methods degrade silently to date order,
-        # which would publish a different Selected Publications list than a
-        # local build. Fail loudly instead.
-        raise SystemExit(
-            f"Selection uses method '{method}' but no Google Scholar citation data "
-            f"is available (data/gs_cache.json missing or has no 'publications').\n"
-            f"Refresh it with: CV_SCHOLAR_REFRESH=1 .venv/bin/python scripts/update_metrics.py\n"
-            f"The cache is tracked in git precisely so CI builds have this data."
-        )
-    if method == "impact":
-        ranked = sorted(entries, key=lambda e: (entry_citations(e, citations), sort_key(e)), reverse=True)
-        return ranked[:count]
     if method == "recent":
         return sorted(entries, key=sort_key, reverse=True)[:count]
-    if method == "weighted":
-        half_life = float(spec.get("half_life_years", 5))
-        this_year = date.today().year
-
-        def score(entry: BibEntry) -> float:
-            age = max(0, this_year - entry_year(entry))
-            return entry_citations(entry, citations) * 0.5 ** (age / half_life)
-
-        ranked = sorted(entries, key=lambda e: (score(e), sort_key(e)), reverse=True)
-        return ranked[:count]
-    raise ValueError(f"Unknown selection method: {method}")
+    raise ValueError(f"Unsupported selection method: {method}; use keys or recent")
 
 
 def load_selections() -> dict[str, dict]:
@@ -420,13 +371,10 @@ def write_selection_outputs(
         "## Selected Publications",
     ]
     if selected_submitted:
-        md_body.append(render_section("Submitted Manuscripts", selected_submitted, submitted=True))
+        md_body.append(render_section("Preprints", selected_submitted, submitted=True))
     if selected_published:
         md_body.append(render_section("Peer Reviewed Articles", selected_published, submitted=False))
-    md_note = (
-        "\n\n*Full list: \\CVpublications{} peer-reviewed articles, "
-        "\\CVcitations{} citations, h-index \\CVhindex*"
-    )
+    md_note = "\n\n*See the full CV for the complete publication list.*"
     (OUT_DIR / f"{tex_stem}.md").write_text(
         "\n\n".join(md_body) + md_note + "\n", encoding="utf-8"
     )
@@ -441,8 +389,7 @@ def write_selection_outputs(
         "\\end{refsection}",
         "",
         "\\vspace{0.5em}",
-        "\\noindent\\textit{Full publication list: \\CVpublications{} peer-reviewed articles, "
-        "\\CVcitations{} citations, h-index \\CVhindex}",
+        "\\noindent\\textit{See the full CV for the complete publication list.}",
     ]
     OUT_TEX_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_TEX_DIR / f"{tex_stem}.tex").write_text("\n".join(tex_lines) + "\n", encoding="utf-8")
@@ -458,9 +405,7 @@ STUDENT_LEGEND_TEX = (
 def write_split_publication_sections(
     published: list[BibEntry], submitted: list[BibEntry], stats: dict
 ) -> None:
-    """Publications split into two categories, as the ODU Academic Affairs CV
-    template requires: "Publications" (peer reviewed only) and, later in the
-    sequence, "Research and Manuscripts Under Review or In-Progress"."""
+    """Generate optional separate published and under-review sections."""
     OUT_TEX_DIR.mkdir(parents=True, exist_ok=True)
 
     md = [
@@ -475,8 +420,7 @@ def write_split_publication_sections(
     tex = [
         "% Generated by scripts/render_publications_web.py. Do not edit by hand.",
         "\\makerubrichead{Publications}",
-        "(\\CVcitations{} citations, h-index \\CVhindex)%",
-        "\\iftoggle{studentmarkers}{ --- }{}" + STUDENT_LEGEND_TEX,
+        STUDENT_LEGEND_TEX,
         "",
         "\\begin{refsection}[published]",
         "\\nocite{*}",
@@ -488,7 +432,7 @@ def write_split_publication_sections(
     md = [
         "<!--\ntex: input:generated/tex/manuscripts_under_review\n-->",
         "## Research and Manuscripts Under Review or In-Progress",
-        render_section("Submitted Manuscripts", submitted, submitted=True),
+        render_section("Preprints", submitted, submitted=True),
     ]
     (OUT_DIR / "manuscripts_under_review.md").write_text(
         "\n\n".join(part for part in md if part) + "\n", encoding="utf-8"
@@ -500,7 +444,7 @@ def write_split_publication_sections(
         "",
         "\\begin{refsection}[submitted]",
         "\\nocite{*}",
-        "\\printbibliography[heading={subbibliography},title={Submitted Manuscripts},resetnumbers=true]",
+        "\\printbibliography[heading={subbibliography},title={Preprints},resetnumbers=true]",
         "\\end{refsection}",
     ]
     (OUT_TEX_DIR / "manuscripts_under_review.tex").write_text("\n".join(tex) + "\n", encoding="utf-8")
@@ -515,7 +459,7 @@ def main() -> int:
     body = [
         "## Publications",
         metrics_line(stats),
-        render_section("Submitted Manuscripts", submitted_entries, submitted=True),
+        render_section("Preprints", submitted_entries, submitted=True),
         render_section("Peer Reviewed Articles", published_entries, submitted=False),
     ]
     OUT_PATH.write_text("\n\n".join(part for part in body if part) + "\n", encoding="utf-8")
@@ -523,9 +467,8 @@ def main() -> int:
 
     all_entries = published_entries + submitted_entries
     submitted_keys = {e.key for e in submitted_entries}
-    citations = load_scholar_citations()
     for name, spec in load_selections().items():
-        selected = select_entries(spec, all_entries, citations)
+        selected = select_entries(spec, all_entries)
         missing = set(spec.get("keys", [])) - {e.key for e in all_entries}
         if missing:
             print(f"Warning: selection '{name}' references unknown keys: {sorted(missing)}")

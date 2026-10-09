@@ -38,62 +38,8 @@
   \RequirePackage[varqu,varl,scale=0.9]{zi4}
 \fi
 
-% ---------------------------------------------------------------------------
-% Named typography presets, selected per document with "cv-latex: typography"
-% (see filters/cv_templates.lua). A preset runs at the start of the document
-% body, after the preamble's default fonts, so no preamble ordering is needed;
-% fontspec allows font changes anywhere.
-%
-%   odu   ODU Academic Affairs CV template: Times New Roman 12 pt body and
-%         Aptos 16 pt bold category headings. Pair it with
-%         "pdf-engine: lualatex" and "fontsize: 12pt" in the .qmd.
-%         Aptos ships with Microsoft Office, not TeX Live: it is used if
-%         registered with the system, else loaded from the Office bundle on
-%         macOS, else replaced by Carlito, the metric-compatible clone of
-%         Calibri (the template's other permitted sans). Times New Roman
-%         falls back to TeX Gyre Termes. CI builds take both fallbacks.
-% ---------------------------------------------------------------------------
-% Header layout knobs (used by preamble.tex); presets may adjust them.
-\newlength\CVaddresswidth
-\setlength\CVaddresswidth{6.2cm}
+% Shared header styling; contact content is in preamble.tex.
 \newcommand\CVheaderfont{}
-
-\newcommand\CVtypography[1]{%
-  \ifcsname cv@typography@#1\endcsname
-    \csname cv@typography@#1\endcsname
-  \else
-    \PackageError{settings}{Unknown typography preset '#1'}{Known presets: odu}%
-  \fi}
-
-\ifxetexorluatex
-  \def\cv@aptosbundle{/Applications/Microsoft Excel.app/Contents/Resources/DFonts/}
-  \newcommand\cv@setsansaptos{%
-    \IfFontExistsTF{Aptos}
-      {\setsansfont{Aptos}}
-      {\IfFileExists{\cv@aptosbundle Aptos.ttf}
-        {\setsansfont{Aptos}[Path=\cv@aptosbundle,Extension=.ttf,
-           UprightFont=*,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-Bold-Italic]}
-        {\PackageWarningNoLine{settings}{Aptos not found; using Carlito (Calibri-compatible)}%
-         \setsansfont{Carlito}}}}
-  \newcommand\cv@setmaintimes{%
-    \IfFontExistsTF{Times New Roman}
-      {\setmainfont{Times New Roman}}
-      {\PackageWarningNoLine{settings}{Times New Roman not found; using TeX Gyre Termes}%
-       \setmainfont{TeX Gyre Termes}}}
-  \expandafter\def\csname cv@typography@odu\endcsname{%
-    \cv@setmaintimes
-    \cv@setsansaptos
-    \rubricfont{\fontsize{16}{19}\selectfont\bfseries\sffamily}%
-    % 12 pt Times is wider than 11 pt Cochineal: keep the contact block at
-    % roughly its original size and give the address column more room.
-    \renewcommand\CVheaderfont{\small}%
-    \setlength\CVaddresswidth{6.8cm}%
-    \normalfont}
-\else
-  \expandafter\def\csname cv@typography@odu\endcsname{%
-    \PackageError{settings}{The 'odu' typography preset needs LuaLaTeX}%
-      {Set "pdf-engine: lualatex" in the .qmd; Times New Roman and Aptos are loaded with fontspec.}}
-\fi
 
 \RequirePackage{graphicx}
 \RequirePackage[hyphens]{url}
@@ -137,9 +83,11 @@
   \sort{\field{sortname}\field{author}\field{editor}\field{translator}}%
   \sort{\field{sorttitle}\field{title}}%
 }
+\newcommand\CVbibmaxnames{99}
+\newcommand\CVbibminnames{99}
 \AtBeginBibliography{%
-  \setcounter{maxnames}{99}%
-  \setcounter{minnames}{99}%
+  \setcounter{maxnames}{\CVbibmaxnames}%
+  \setcounter{minnames}{\CVbibminnames}%
 }
 \DefineBibliographyStrings{english}{url={\textsc{url}}}
 \RequirePackage{csquotes}
@@ -411,6 +359,9 @@
                    test {\ifdefstrequal{\namepartgiven}{\my@gname}}}
         {\global\toggletrue{boldname}\breakforeach}{}%
     }%
+    \iftoggle{boldname}{\textbf{##1}}{##1}%
+  }%
+  \renewcommand*{\mkbibnamesuffix}[1]{%
     \iftoggle{boldname}{\textbf{##1}}{##1}%
   }%
 }

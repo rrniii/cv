@@ -1,20 +1,37 @@
 <!--
 type: grants
+tex: generated/tex/grants/awarded
 -->
 
-## Grants Awarded
+## Grants and Funded Programmes
 
-- September 2026 -- May 2027 | \$750,000 | _AI-Enabled Digital Twin for Scalable Injector Optimization and Control_ (DOE). Role: Senior Personnel (11\%). Investigators: M. Yadav (PI), T. Satogata (Co-PI, Jefferson Lab), J. Strube (Co-PI, PNNL).
-- July 2026 -- June 2028 | \$715,000 | _High Performance GaAs-based Spin-Polarized Electron Photocathodes for DOE NP Current and Future Projects_ (DOE Award DE-SC0026828). Role: Co-PI (50\%). Investigators: S. Marsillac (PI), M. Grau (Co-PI).
-- May 2026 -- April 2027 | \$15,000 | intramural | _Expanding `How to Research': A Physics Undergraduate Research Pipeline_ (ODU College of Sciences Undergraduate Research Program). Role: PI. Submitted on behalf of the Department of Physics.
-- September 2024 -- December 2026 | \$529,000 | _Fabrication of Spin Polarized Electron Sources with High Polarization and QE for DOE NP_ (DOE Award DE-SC0025519). Role: Co-PI (50\%). Investigators: S. Marsillac (PI), M. Grau (Co-PI).
-- 2024 -- 2026 | user access | _Hybrid Quantum Computation Using Qubits and Qumodes on QSCOUT_ (Sandia National Laboratories). Role: PI. Investigators: M. Grau (PI), F. Ringer (Co-PI, Stony Brook).
-- February 2024 -- December 2024 | \$7,400 | _Summer Research Experience for Undergraduate Students: Exploring NV-Center Quantum Sensing_ (VSGC Innovative Proposals). Role: PI.
-- May 2023 -- May 2024 | \$10,000 | _Developing Capacity for Quantum Science with Trapped Ions_ (ODU Program for Undergraduate Research and Scholarship). Role: PI.
-- March 2023 -- December 2023 | \$7,300 | _High School Physics and Mathematics Teacher Professional Development of Integrated STEM through Arduinos at Old Dominion University_ (VSGC Innovative Proposals). Role: PI.
-- January 2023 -- September 2023 | \$93,220 | _Polarized Bunched Electron Beam in Low-Energy Spin-Transparent Storage Ring as a Quantum Computer_ (Jefferson Lab LDRD). Role: Senior Personnel (13\%). Investigators: R. Suleiman (PI, Jefferson Lab).
-- 2023 | \$10,000 | _Trapping lutetium ions for quantum computing_ (VSGC New Investigator Program). Role: PI.
-- September 2022 -- December 2024 | \$359,000 | _Enhancing the Design of Photocathodes_ (DOE Award DE-SC0023369). Role: Co-PI (30\%). Investigators: S. Marsillac (PI), M. Grau (Co-PI).
-- May 2022 -- August 2022 | \$7,000 | _Where is the antimatter? An investigation and mitigation of systematic errors in a novel search for new physics_ (ODU Summer Research Fellowship Program). Role: PI.
-- September 2021 -- August 2024 | 199'978 CHF | _Seeing atoms with the naked eye_ (SNSF Agora 199782). Role: Co-PI. _Awarded in former research group._ Investigators: J. P. Home (PI), M. Grau (Co-PI).
-- December 2020 -- December 2022 | \$200,000 | _Photocathodes with 90\% Polarization for DOE Nuclear Physics_ (DOE). Role: Co-PI (8\%). Investigators: S. Marsillac (PI), M. Grau (Co-PI).
+### Principal, Co-Principal and UK Principal Investigator awards
+
+- 2025 -- 2027 | approximately £2.7m | **GAMB2LE: Greenland Automated Mass Balance and Boundary Layer Experiment** (ARIA); Co-PI.
+- 2024 -- 2028 | £750k | **Next-Generation Cloud Radar for the UK Community** (NERC capital award); PI.
+- 2023 -- 2027 | £1.875m across six organisations (whole programme) | **WOEST: Observing the Evolving Structures of Turbulence** (NERC); programme PI.
+- 2023 | £50k | **Integration of NCAS X-band radar** (Environment Agency partnership); PI.
+- 2022 -- 2026 | £75k | **2D Video Disdrometer capability** (NCAS capital award); PI.
+- 2022 -- 2025 | £3.08m whole-programme value | **ICECAPS-MELT** (NSF/NERC); UK PI.
+- 2021 -- 2025 | £187k | **Vertically Looking Aeroecological Radar** (University of Leeds/NCAS capital award); PI.
+- 2021 -- 2025 | £15k | **Rain gauges for radar calibration** (NCAS capital award); PI.
+- 2021 -- 2022 | £88k | **BioDAR doctoral studentship** (NERC); PI.
+- 2020 -- 2023 | £1.8m | **Next-Generation X-band Weather Radar** (UKRI World-Class Research Infrastructure); PI.
+- 2019 -- 2021 | £54k | **Extension to Radar Applications in Northern England** (Environment Agency); PI.
+- 2018 -- 2020 | £917k plus Arctic logistics (whole programme) | **ICECAPS Aerosol-Cloud Experiment** (NSF/NERC); UK PI.
+- 2018 -- 2019 | £442k | **Radar Applications in Northern England** (Environment Agency); PI.
+- 2017 -- 2021 | £88k | **Novel Ways to See More doctoral studentship** (NERC); PI.
+- 2016 -- 2020 | £88k | **Evaluation of radar hydrometeor classification** (NERC Industrial CASE studentship); PI.
+- 2015 -- 2016 | £80k | **Radar Applications in Northern Scotland** (SEPA contract); PI.
+- 2015 | £10k | **ESA Wind Lidar Greenland Inter-comparison** (ESA); PI.
+
+### Collaborative programmes
+
+- 2025 -- 2028 | £6.1m whole-programme value | **REFLECT: A Responsible Innovation Framework for Assessing Novel Spray Technology Research to Examine Local Albedo Changes from Marine Brightening and Its Multi-Scale Impacts** (ARIA); Co-Investigator.
+- 2025 -- 2028 | £1.7m whole-programme equivalent; time and data contributed in kind | **AVOCET: Migratory Avifauna and Offshore Wind Farms: Improving the Assessment of Collision Risks Using Observations from Weather Radars** (France Energies Marines); Co-Investigator and WP2 contributor.
+- 2024 -- 2026 | £805k whole-programme value | **COBALT: Contrail Observations and Lifecycle Tracking** (NERC); Co-Investigator.
+- 2022 -- 2027 | £11.8m whole-network value; participation in kind | **TONe: Troll Observing Network** (Research Council of Norway); international collaborator for the Integrated Cloud Observatory.
+- 2021 -- 2025 | £2.3m whole-programme value | **DRUID: Drivers and Repercussions of UK Insect Declines** (NERC); Co-Investigator.
+- 2019 -- 2021 | £798k whole-programme value | **BioDAR: Dual-Polarisation Weather Radar for Advanced Monitoring of Aerial Biodiversity** (NERC); Co-Investigator and radar lead.
+- 2018 -- 2023 | £3.7m whole-programme value | **TerraMaris: The Maritime Continent – Driver of the Global Climate System** (NERC); Co-Investigator.
+- 2018 -- 2021 | £799k whole-programme value | **MOCCHA: Analysis of Dynamic, Cloud, and Aerosol Processes** (NERC); Co-Investigator.

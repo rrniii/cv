@@ -72,7 +72,7 @@ def main() -> int:
             synctex.unlink(missing_ok=True)
             removed += 1
 
-    # Clean root-level artifacts created by prepare_texlive.py
+    # Clean root-level bibliography artifacts.
     for bbl in project_dir.glob("*.bbl"):
         bbl.unlink(missing_ok=True)
         removed += 1

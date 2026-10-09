@@ -5,10 +5,9 @@ tex: generated/tex/appointments_detailed
 
 ## Appointments
 
-- 2021 -- | **Assistant Professor** Old Dominion University, Norfolk, VA
-- 2020 -- 2021 | **Senior Scientist (Oberassistent)** ETH Zürich, Zürich, Switzerland
-  Trapped Ion Quantum Information Group, Prof. Dr. Jonathan P. Home
-- 2016 -- 2019 | **Postdoctoral Research Assistant** ETH Zürich, Zürich, Switzerland
-  Trapped Ion Quantum Information Group, Prof. Dr. Jonathan P. Home
-- 2009 -- 2015 | **Graduate Research Assistant** JILA, Boulder, CO
-  Thesis advisors: Eric A. Cornell and Jun Ye.
+- 2026 -- | **Professor of Atmospheric Physics**, University of Leeds and National Centre for Atmospheric Science (NCAS)
+- 2018 -- 2026 | **Associate Professor of Observational Atmospheric Science**, University of Leeds and NCAS
+- 2014 -- 2018 | **Lecturer in Observational Atmospheric Science**, University of Leeds and NCAS
+- 2013 -- 2014 | **Advanced Study Program Postdoctoral Fellow**, National Center for Atmospheric Research, USA
+- 2012 | **Postdoctoral Research Associate**, NOAA Earth System Research Laboratory and CIRES, USA
+- 2008 -- 2012 | **Graduate Research Fellow**, NOAA ESRL and CIRES, University of Colorado Boulder, USA
