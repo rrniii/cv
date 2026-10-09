@@ -478,7 +478,7 @@ local function render_latex(doc)
     end
     table.insert(blocks, pandoc.RawBlock("latex", command))
     for _, block in ipairs(section.blocks) do
-      if block.t == "RawBlock" and block.format == "latex" then
+      if block.t == "RawBlock" and (block.format == "latex" or block.format == "tex") then
         table.insert(blocks, block)
       end
     end
