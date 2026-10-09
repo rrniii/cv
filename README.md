@@ -81,9 +81,13 @@ GitHub Actions builds PDF and HTML on pull requests, main pushes and manual
 runs. Every successful build produces a downloadable `cv-build` artifact.
 The build checks that the short PDFs contain exactly one, two and three pages;
 rendered files remain downloadable for review if that check fails.
-Only main pushes deploy GitHub Pages and create a PDF
-release tagged with the source commit. Pull requests and manual runs only build. Configure
+Only main pushes and manual runs on main deploy GitHub Pages and create a PDF
+release tagged with the source commit. Pull requests only build. Configure
 repository Pages to use GitHub Actions.
+
+CI verifies the installed TeX Live release against explicit CTAN mirror
+metadata before updating packages. A stale mirror is skipped; an incompatible
+cache/release fails with a diagnostic instead of attempting a downgrade.
 
 Before publishing content changes, check source accuracy, render the HTML and
 inspect PDF layout and the advertised short-variant page limits. The short

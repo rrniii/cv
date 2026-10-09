@@ -27,13 +27,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.TinyTeX
-          key: tinytex-${{ hashFiles('**/*.sty', '**/*.qmd', '_quarto.yml') }}
-          restore-keys: tinytex-
+          key: tinytex-2026-repo-v2-${{ hashFiles('**/*.sty', '**/*.qmd', '_quarto.yml') }}
+          restore-keys: tinytex-2026-repo-v2-
 
       - name: Install LaTeX packages
         run: |
           export PATH="$HOME/.TinyTeX/bin/$(uname -m)-linux:$PATH"
-          tlmgr update --self
+          tex_root="$(kpsewhich -var-value=TEXMFROOT)"
+          repository="$(python3 scripts/select_texlive_repository.py "$tex_root")"
+          tlmgr option repository "$repository"
+          tlmgr update --self --all
           tlmgr install curve cochineal cabin inconsolata fontawesome5 simpleicons \
             fontspec luaotfload unicode-math lualatex-math lm-math \
             biblatex-phys biber silence relsize fancyhdr lastpage \
@@ -87,7 +90,7 @@ jobs:
 
   publish:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     permissions:
       contents: write

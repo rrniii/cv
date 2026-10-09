@@ -22,7 +22,9 @@ class. Read README.md for source provenance, build requirements and deployment.
 - Check the source record, HTML behaviour and PDF layout; verify the short
   variants' one-, two- and three-page limits after meaningful content edits.
 - GitHub Actions produces a downloadable cv-build artifact for every build.
-  Only main pushes deploy Pages and create PDF releases.
+  Only main pushes/manual runs on main deploy Pages and create PDF releases.
+  CI validates TeX Live mirror freshness and release compatibility before
+  updating packages; clear an incompatible cache rather than downgrading TeX.
 
 Preserve upstream history and template attribution in settings.sty. Do not
 add an invented licence or publish private source documents.
