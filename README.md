@@ -50,7 +50,7 @@ Use `date | description` for dated sections and
 formats. Escape LaTeX special characters in prose (`\%`, `\&`, `\#`, `\_`).
 
 Contact details are in `_quarto.yml` for HTML and `preamble.tex` for PDF. The
-landing page is `web/index.html`; the portrait is `web/photo.jpg`. The PDF
+landing page is `web/index.html`; the portrait is `web/photo.png`. The PDF
 preamble and publication renderer recognise the BibTeX name
 `Neely, III, R. R.` and bold Ryan's name while preserving the suffix.
 

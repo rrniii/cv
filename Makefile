@@ -20,7 +20,7 @@ all: generate
 
 site:
 	mkdir -p _build
-	cp web/robots.txt web/photo.jpg _build/
+	cp web/robots.txt web/photo.png _build/
 	sed "s/{{BUILD_DATE}}/$$(date -u +%Y-%m-%d)/" web/index.html > _build/index.html
 
 pdf: generate
