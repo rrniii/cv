@@ -28,6 +28,8 @@ is a maintained snapshot; build dates indicate when outputs were generated.
 `publications/submitted.bib` contain journal articles and preprints. Named
 short-CV selections live in `publications/selections.json` and use explicit
 BibTeX keys. The optional `recent` selection method orders records by date.
+The one-page CV has dedicated summaries in `sections/one_page/`, so its balance
+of research contributions, career history and mentoring can be edited independently.
 
 Each section starts with a metadata comment, a heading, and entries:
 

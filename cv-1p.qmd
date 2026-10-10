@@ -8,15 +8,15 @@ cv-latex:
   subrubricspace: "0pt"
 format:
   pdf:
-    fontsize: 10pt
+    fontsize: 11pt
     geometry:
       - margin=0.5in
   html:
     toc: true
 ---
 
-{{< include sections/profile.md >}}
-{{< include sections/appointments_short.md >}}
-{{< include sections/education_short.md >}}
-{{< include sections/awards_selected.md >}}
+{{< include sections/one_page/profile.md >}}
+{{< include sections/one_page/research.md >}}
+{{< include sections/one_page/background.md >}}
+{{< include sections/one_page/researchers.md >}}
 {{< include generated/md/publications_selected_top3.md >}}
