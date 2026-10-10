@@ -358,6 +358,7 @@ def write_selection_outputs(
     name: str,
     selected: list[BibEntry],
     submitted_keys: set[str],
+    full_cv_url: str | None = None,
 ) -> None:
     """Write the md (HTML render, with tex: override) and tex (PDF render) for one selection."""
     keys = [e.key for e in sorted(selected, key=sort_key, reverse=True)]
@@ -375,6 +376,15 @@ def write_selection_outputs(
     if selected_published:
         md_body.append(render_section("Peer Reviewed Articles", selected_published, submitted=False))
     md_note = "\n\n*See the full CV for the complete publication list.*"
+    tex_note = "\\noindent\\textit{See the full CV for the complete publication list.}"
+    if full_cv_url:
+        label = full_cv_url.removeprefix("https://")
+        md_note = f"\n\n*Full CV and publication list: [{label}]({full_cv_url}).*"
+        tex_note = (
+            "\\noindent\\textit{Full CV and publication list: "
+            + rf"\href{{{full_cv_url}}}{{{label}}}"
+            + ".}"
+        )
     (OUT_DIR / f"{tex_stem}.md").write_text(
         "\n\n".join(md_body) + md_note + "\n", encoding="utf-8"
     )
@@ -389,7 +399,7 @@ def write_selection_outputs(
         "\\end{refsection}",
         "",
         "\\vspace{0.5em}",
-        "\\noindent\\textit{See the full CV for the complete publication list.}",
+        tex_note,
     ]
     OUT_TEX_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_TEX_DIR / f"{tex_stem}.tex").write_text("\n".join(tex_lines) + "\n", encoding="utf-8")
@@ -472,7 +482,7 @@ def main() -> int:
         missing = set(spec.get("keys", [])) - {e.key for e in all_entries}
         if missing:
             print(f"Warning: selection '{name}' references unknown keys: {sorted(missing)}")
-        write_selection_outputs(name, selected, submitted_keys)
+        write_selection_outputs(name, selected, submitted_keys, spec.get("full_cv_url"))
 
     return 0
 

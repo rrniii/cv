@@ -5,4 +5,4 @@ tex: generated/tex/one_page/profile
 
 ## Research Profile
 
--  | **Professor of Atmospheric Physics at the University of Leeds and NCAS**, specialising in polar clouds, radar and lidar. Connects instrument engineering, Arctic and Antarctic field observations, and model evaluation to understand how clouds redistribute energy and water, with applications in precipitation, flood forecasting and radar aeroecology.
+-  | **Professor of Atmospheric Physics, University of Leeds and NCAS**. Develops radar and lidar systems and combines Arctic and Antarctic field observations with model evaluation to explain how clouds redistribute energy and water. Applications span precipitation, flood forecasting and radar aeroecology.
