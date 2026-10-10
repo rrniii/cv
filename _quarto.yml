@@ -23,6 +23,7 @@ filters:
 author: "Ryan R. Neely III"
 pagetitle: "Ryan R. Neely III — Curriculum vitae"
 cv:
+  role: "Professor of Atmospheric Physics"
   email: "R.Neely@leeds.ac.uk"
   website: "https://environment.leeds.ac.uk/see/staff/1447/dr-ryan-neely-iii"
   website-label: "University profile"

@@ -258,6 +258,13 @@ body > #TOC a.active {
   line-height: 1;
 }
 
+.cv-name-title .cv-role {
+  margin: 0.35rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .cv-name-actions {
   display: flex;
   flex-wrap: wrap;
@@ -837,6 +844,10 @@ body > #TOC a.active {
 
   .cv-name-title p {
     font-size: 18pt;
+  }
+
+  .cv-name-title .cv-role {
+    font-size: 11pt;
   }
 
   .cv-name-actions {

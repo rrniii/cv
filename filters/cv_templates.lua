@@ -262,6 +262,8 @@ end
 local function html_header(meta)
   local cv = meta.cv or {}
   local name = meta_string(cv.name, meta_string(meta.author, meta_string(meta.title, "Curriculum Vitae")))
+  local role = meta_string(cv.role, "")
+  local role_html = role ~= "" and ('<p class="cv-role">' .. escape_html(role) .. '</p>') or ""
 
   local phone = meta_string(cv.phone, "")
   local phone_href = derived_href("phone", phone)
@@ -314,7 +316,7 @@ local function html_header(meta)
     '<div class="cv-header">',
     '<div class="cv-name-block">',
     '<div class="cv-name-row">',
-    '<div class="cv-name-title"><p>' .. escape_html(name) .. '</p></div>',
+    '<div class="cv-name-title"><p>' .. escape_html(name) .. '</p>' .. role_html .. '</div>',
     '<div class="cv-name-actions">',
     '<p>',
     '<a href="#" class="cv-header-action js-expand-all">Expand all</a> ',
