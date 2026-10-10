@@ -1,6 +1,16 @@
 {
-  "bibliography_basis": "September 7, 2026 academic CV; source-listed preprint kept separately. No aggregate current publication total is asserted.",
+  "bibliography_basis": "September 7, 2026 academic CV, supplemented by the submitted September 21 Faraday application and primary publisher records; preprints kept separately. No aggregate current publication total is asserted.",
   "records": [
+    {
+      "key": "thompson2026woest",
+      "source": "Submitted Faraday full publication list, September 21, 2026",
+      "source_paragraph": 89,
+      "source_number": 2,
+      "kind": "preprint",
+      "doi": "10.5194/egusphere-2026-4631",
+      "publisher_url": "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4631/",
+      "publisher_verified_at": "2026-10-10"
+    },
     {
       "key": "sledd2026firn",
       "source": "Author-provided academic CV, September 2026",

@@ -16,8 +16,9 @@ Research contributions, leadership summaries and selected papers also draw on
 the submitted Faraday Discovery Fellowship application of September 21, 2026.
 These summaries describe established work; the fellowship's proposed research
 is not presented as an awarded or completed programme.
-The bibliography keeps the source-listed preprint separate from journal
-articles. Publication provenance is recorded in
+The bibliography keeps preprints separate from journal articles, including
+the WesCon--WOEST multi-Doppler wind-field preprint identified in the Faraday
+publication list and checked against its publisher record. Publication provenance is recorded in
 [data/publication_sources.json](data/publication_sources.json). This repository
 is a maintained snapshot; build dates indicate when outputs were generated.
 
