@@ -1,13 +1,13 @@
 {
-  "_comment": "Explicit selections reflect radar instrumentation, polar observations and radar aeroecology. No citation-based ranking or unverified Google Scholar metrics are used.",
+  "_comment": "Explicit selections reflect significant contributions identified in the submitted September 21, 2026 Faraday application: polar-cloud observables, model development, radar instrumentation and aeroecology. No citation-based ranking or unverified Google Scholar metrics are used.",
   "default": {
     "method": "keys",
     "keys": [
       "mungee2025aerial",
       "neely2018nxpol",
       "neely2013capabl",
-      "guy2024p60",
-      "neely2021p42"
+      "stillwell2019p39",
+      "neely2016p24"
     ]
   },
   "top3": {
@@ -25,10 +25,10 @@
       "neely2018nxpol",
       "neely2013capabl",
       "martin2026p67",
-      "hodges2024p61",
-      "guy2024p60",
-      "dufton2023p59",
-      "guy2022p53"
+      "stillwell2019p39",
+      "guy2021p46",
+      "sterzinger2022p52",
+      "neely2016p24"
     ]
   },
   "recent": {

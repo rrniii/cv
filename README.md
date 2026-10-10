@@ -12,6 +12,10 @@ HTML.
 
 Content is adapted from the September 7, 2026 academic CV, with supporting
 publication metadata from the earlier academic CV and primary journal pages.
+Research contributions, leadership summaries and selected papers also draw on
+the submitted Faraday Discovery Fellowship application of September 21, 2026.
+These summaries describe established work; the fellowship's proposed research
+is not presented as an awarded or completed programme.
 The bibliography keeps the source-listed preprint separate from journal
 articles. Publication provenance is recorded in
 [data/publication_sources.json](data/publication_sources.json). This repository

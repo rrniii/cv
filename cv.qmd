@@ -13,6 +13,8 @@ format:
 {{< include sections/education.md >}}
 {{< include sections/research_interests.md >}}
 {{< include sections/research_highlights.md >}}
+{{< include sections/research_contributions.md >}}
+{{< include sections/research_culture.md >}}
 {{< include sections/awards.md >}}
 {{< include sections/teaching.md >}}
 {{< include sections/students.md >}}
