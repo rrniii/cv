@@ -6,6 +6,7 @@ tex: generated/tex/awards
 ## Awards and Distinctions
 
 - 2024 | **NCAS Atmospheric Star Award** for scientific rigour, innovative problem-solving, mentorship and positive fieldwork leadership.
+- 2023 | **NCAS Atmospheric Stars Award**.
 - 2021 | **Royal Academy of Engineering Frontiers**, selected participant in the symposium on engineering and the biodiversity crisis.
 - 2016 | **Inaugural Leeds Crucible cohort**, interdisciplinary research and leadership development.
 - 2013 | **Atmospheric Chemistry Colloquium for Emerging Senior Scientists (ACCESS XII)**, selected participant, Brookhaven National Laboratory.

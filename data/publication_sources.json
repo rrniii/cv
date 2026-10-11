@@ -1,6 +1,19 @@
 {
-  "bibliography_basis": "September 7, 2026 academic CV, supplemented by the submitted September 21 Faraday application and primary publisher records; preprints kept separately. No aggregate current publication total is asserted.",
+  "bibliography_basis": "September 7, 2026 academic CV, supplemented by the submitted September 21 Faraday application and public primary records checked October 11, 2026; preprints kept separately. No aggregate current publication total is asserted.",
   "records": [
+    {
+      "key": "lo2026zdr",
+      "source": "Publisher-deposited Crossref metadata and University of Reading author publication record",
+      "kind": "journal_article",
+      "doi": "10.1002/qj.70237",
+      "publisher_url": "https://rmets.onlinelibrary.wiley.com/doi/10.1002/qj.70237",
+      "metadata_source_urls": [
+        "https://api.crossref.org/works/10.1002%2Fqj.70237",
+        "https://research.reading.ac.uk/meteorology/people/brian-lo/"
+      ],
+      "metadata_verified_at": "2026-10-11",
+      "metadata_verification": "Confirms title, eleven-author order, 2026 publication year and article number e70237. Ryan R. Neely III is the tenth author; the canonical name is retained rather than Crossref's incorrect family-name split. No volume has been assigned in the checked metadata."
+    },
     {
       "key": "thompson2026woest",
       "source": "Submitted Faraday full publication list, September 21, 2026",
@@ -291,7 +304,12 @@
       "source_number": 36,
       "kind": "journal_article",
       "doi": "10.5194/amt-11-6481-2018",
-      "author_source": "Author-provided CV (full author details)"
+      "author_source": "https://amt.copernicus.org/articles/11/6481/2018/",
+      "metadata_source_urls": [
+        "https://amt.copernicus.org/articles/11/6481/2018/"
+      ],
+      "metadata_verification": "Current publisher citation confirms Freya I. Addison, entered as Addison, F. I., and the complete thirteen-author order.",
+      "metadata_verified_at": "2026-10-11"
     },
     {
       "key": "plummer2018p35",
@@ -413,7 +431,12 @@
       "source_number": 22,
       "kind": "journal_article",
       "doi": "10.5194/gmd-9-1853-2016",
-      "author_source": "Author-provided CV (full author details)"
+      "author_source": "https://gmd.copernicus.org/articles/9/1853/2016/",
+      "metadata_source_urls": [
+        "https://gmd.copernicus.org/articles/9/1853/2016/"
+      ],
+      "metadata_verification": "Publisher citation confirms Maria Val Martin as Val Martin, M.; corrects the compound surname previously entered as Martin, M. V.",
+      "metadata_verified_at": "2026-10-11"
     },
     {
       "key": "kremser2016p21",
@@ -473,7 +496,12 @@
       "source_paragraph": 197,
       "source_number": 15,
       "kind": "journal_article",
-      "doi": "10.1002/2015GL063181"
+      "doi": "10.1002/2015GL063181",
+      "metadata_source_urls": [
+        "https://api.crossref.org/works/10.1002%2F2015GL063181"
+      ],
+      "metadata_verification": "Publisher-deposited Crossref metadata confirms Geophysical Research Letters volume 42, pages 2540-2546 (issue 7).",
+      "metadata_verified_at": "2026-10-11"
     },
     {
       "key": "neely2014p14",
@@ -599,7 +627,9 @@
     }
   ],
   "notes": [
-    "Full author lists come directly from the source CVs, with latest-source explicit names taking precedence.",
-    "McCusker (2023) title and fuller author initials are verified against the primary Atmospheric Chemistry and Physics journal page."
+    "Full author lists originate from the source CVs; checked primary publisher records take precedence for confirmed bibliographic corrections and author name updates.",
+    "McCusker (2023) title and fuller author initials are verified against the primary Atmospheric Chemistry and Physics journal page.",
+    "October 11, 2026 audit checked all 69 pre-existing DOI records (67 journal articles and 2 preprints) against Crossref registration metadata: all publication years and author-list counts match, and every DOI returned a first-hop redirect to a publisher or preprint target. This is not an inspection of every final publisher landing page.",
+    "Primary publisher evidence overrules imperfect Crossref deposits: the Pickering (2021) title, Goerke (2017) full page range and canonical Neely name are retained where publisher or published-paper evidence is more complete. No unassigned volume or page number is inferred for Miller (2026) Early View."
   ]
 }

@@ -3,7 +3,7 @@ type: grants
 tex: generated/tex/grants/active
 -->
 
-## Current Funded Programmes
+## Selected Current Funded Programmes
 
 - 2025 -- 2027 | approximately £2.7m | **GAMB2LE: Greenland Automated Mass Balance and Boundary Layer Experiment** (ARIA); Co-PI.
 - 2024 -- 2028 | £750k | **Next-Generation Cloud Radar for the UK Community** (NERC capital award); PI.

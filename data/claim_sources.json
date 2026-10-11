@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-11",
+  "records": [
+    {
+      "claim": "Professor of Atmospheric Physics",
+      "status": "confirmed",
+      "sources": [
+        "https://environment.leeds.ac.uk/see/staff/1447/dr-ryan-neely-iii",
+        "https://people.ncas.ac.uk/people/view/337"
+      ]
+    },
+    {
+      "claim": "COBALT award period 2024--2027, Co-Investigator",
+      "status": "corrected",
+      "grant_reference": "NE/Z503794/1",
+      "source": "https://gtr.ukri.org/projects?ref=NE/Z503794/1",
+      "note": "Current funder record extends beyond the end date in the earlier author-provided CV."
+    },
+    {
+      "claim": "BioDAR award period 2019--2022, Co-Investigator",
+      "status": "corrected",
+      "grant_reference": "NE/S001298/1",
+      "source": "https://gtr.ukri.org/projects?ref=NE/S001298/1"
+    },
+    {
+      "claim": "TerraMaris Leeds award period 2018--2025, Co-Investigator",
+      "status": "corrected",
+      "grant_reference": "NE/R016739/1",
+      "source": "https://gtr.ukri.org/projects?ref=NE/R016739/1"
+    },
+    {
+      "claim": "ICECAPS-ACE UK award period 2018--2021, PI",
+      "status": "corrected",
+      "grant_reference": "NE/S00906X/1",
+      "source": "https://gtr.ukri.org/projects?ref=NE/S00906X/1"
+    },
+    {
+      "claim": "DOOC 2025--2029, Co-Investigator, project value £2.3m",
+      "status": "added",
+      "source": "https://environment.leeds.ac.uk/dir-record/research-projects/2198/dooc-drone-observation-of-clouds-and-their-role-in-weather-and-climate"
+    },
+    {
+      "claim": "NCAS Atmospheric Stars Awards in 2023 and 2024",
+      "status": "completed",
+      "source": "https://ncas.ac.uk/for-staff/atmospheric-stars-awards/",
+      "note": "The 2024 individual award citation remains author-provided; the winners page establishes the two years."
+    },
+    {
+      "claim": "Current professional name Lindsay Rhodes",
+      "status": "updated",
+      "source": "https://people.ncas.ac.uk/people/view/212",
+      "note": "Historic publication and dataset author names remain as published."
+    },
+    {
+      "claim": "UPBRAIn 2021--2023 and MOSAiC Boundary Layer 2019--2022, Co-Investigator",
+      "status": "added",
+      "sources": [
+        "https://gtr.ukri.org/projects?ref=NE/W004534/1",
+        "https://gtr.ukri.org/projects?ref=NE/S002472/1"
+      ],
+      "note": "Amounts use author-provided project-budget figures, rather than substituting funder-awarded values."
+    },
+    {
+      "claim": "CONCIRTO, BeeDAR, two WCSSP awards and PestDar collaborations",
+      "status": "restored_from_author_source",
+      "source": "Author-provided promotion CV, 19 December 2025, funding-gained table 15",
+      "note": "Historic award dates, roles and budgets are transcribed from the source; they are not all independently corroborated by public award records in this audit."
+    },
+    {
+      "claim": "DiVeN Co-PI 2016--2019; NCAS advisory roles 2015--2019; FAAM cloud-radar feasibility lead 2020--2024",
+      "status": "restored_from_author_source",
+      "source": "Author-provided promotion CV, 19 December 2025, professional-role table",
+      "note": "FAAM activity is limited to feasibility, design and costing."
+    },
+    {
+      "claim": "Weather-facility PI since 2014; Ka-band cloud-facility PI since 2024",
+      "status": "clarified",
+      "source": "Author-provided promotion CV, 19 December 2025, professional-role table"
+    },
+    {
+      "claim": "NERC-funded SnøTroll project leadership",
+      "status": "clarified",
+      "source": "Submitted Faraday application, 21 September 2026, physical pages 8 and 11, collaborators and current roles",
+      "note": "Exact grant amount, period and formal award-role designation remain unconfirmed, so no monetary award row was invented."
+    }
+  ],
+  "audit_limits": [
+    "Grant periods describe current funder/project records where independently verified; a local subaward period may differ.",
+    "Funding values retain the existing author-provided budget basis pending reconciliation: WOEST CV £1.875m versus GtR funded £1,506,127; BioDAR CV £798k versus GtR funded £607,143; AVOCET CV £1.7m versus official project budget €1.922m. These differences are not asserted to be errors or personal funding totals.",
+    "Clare Ballantyne and Emily Smeaton remain 2026--, supervisor; first-day/onboarding evidence supports the names and year, but primary/secondary status was not established.",
+    "Global Biosphere Sensing remains 2023--2024 because the explicit dated source table is more precise than a later present-tense narrative.",
+    "Current responsibility for Arctic Polarised Raman Lidar and FAAM user advisory roles needs confirmation before adding an open-ended historic role.",
+    "Same-year bibliography tie order differs between the Python HTML renderer and biblatex PDF renderer; publication years agree. No unverified month/day dates were added."
+  ]
+}

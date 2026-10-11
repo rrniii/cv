@@ -22,6 +22,17 @@ publication list and checked against its publisher record. Publication provenanc
 [data/publication_sources.json](data/publication_sources.json). This repository
 is a maintained snapshot; build dates indicate when outputs were generated.
 
+The October 11, 2026 source audit checked the bibliography against DOI and
+publisher records, reconciled grant dates with current funder records, and
+restored documented awards, collaborations and professional roles. Claim
+evidence and source provenance are recorded in [data/claim_sources.json](data/claim_sources.json)
+and dataset records in [data/dataset_sources.json](data/dataset_sources.json).
+Dataset dates follow the linked catalogue's canonical citation year when it
+differs from the date the data first appeared online. VolcanEESM version 2.0
+is explicitly an unpublished catalogue preview. Funding amounts retain the
+author-provided figures pending reconciliation with funder-awarded values;
+no aggregate of personal funding is calculated.
+
 ## Edit the content
 
 `sections/` contains the Markdown sources. `publications/published.bib` and
@@ -101,7 +112,9 @@ cache/release fails with a diagnostic instead of attempting a downgrade.
 
 Before publishing content changes, check source accuracy, render the HTML and
 inspect PDF layout and the advertised short-variant page limits. The short
-PDFs use a compact contact header and shortened author lists; the full CV
+PDFs use a compact contact header. The two- and three-page CVs retain complete
+author lists for their selected papers so Ryan's authorship remains visible;
+the one-page version abbreviates only lists longer than ten names. The full CV
 retains complete author lists.
 
 ## Template provenance

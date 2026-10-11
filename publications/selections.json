@@ -2,6 +2,7 @@
   "_comment": "Explicit selections reflect significant contributions identified in the submitted September 21, 2026 Faraday application: polar-cloud observables, model development, radar instrumentation and aeroecology. No citation-based ranking or unverified Google Scholar metrics are used.",
   "default": {
     "method": "keys",
+    "full_cv_url": "https://rrniii.github.io/cv/",
     "keys": [
       "mungee2025aerial",
       "neely2018nxpol",
@@ -21,6 +22,7 @@
   },
   "funding": {
     "method": "keys",
+    "full_cv_url": "https://rrniii.github.io/cv/",
     "keys": [
       "mungee2025aerial",
       "neely2018nxpol",

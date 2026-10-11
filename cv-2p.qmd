@@ -1,7 +1,7 @@
 ---
 cv-latex:
   compactheader: true
-  maxnames: 6
+  maxnames: 99
   minnames: 3
   rubricafterspace: "-6pt"
   rubricspace: "0pt"

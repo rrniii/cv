@@ -1,7 +1,7 @@
 ---
 cv-latex:
   compactheader: true
-  maxnames: 8
+  maxnames: 99
   minnames: 4
 format:
   html:
