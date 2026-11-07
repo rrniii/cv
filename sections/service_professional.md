@@ -5,6 +5,7 @@ tex: generated/tex/service_professional
 
 ## Professional Service
 
+- Nov 2026 -- | **Editorial Board**, Antarctic Science.
 - 2026 -- | **Steering Committee**, UK Arctic and Antarctic Partnership (UKAAP).
 - 2026 | **Invited panel reviewer**, German Research Foundation Priority Programme on the High Altitude and Long Range Research Aircraft (HALO).
 - 2025 | **Co-Host**, UK Atmospheric Radar Community Meeting, NCAS, Leeds.

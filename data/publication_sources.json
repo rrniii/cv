@@ -2,6 +2,27 @@
   "bibliography_basis": "September 7, 2026 academic CV, supplemented by the submitted September 21 Faraday application and public primary records checked October 11, 2026; preprints kept separately. No aggregate current publication total is asserted.",
   "records": [
     {
+      "key": "gallagher2026greenland",
+      "source": "EarthArXiv repository record",
+      "kind": "preprint",
+      "doi": "10.31223/X5J236",
+      "publisher_url": "https://eartharxiv.org/repository/view/16000/",
+      "metadata_verified_at": "2026-11-07",
+      "metadata_verification": "Posted 6 November 2026, version 1; 20 authors in repository order. Explicitly labelled as a non-peer-reviewed preprint."
+    },
+    {
+      "key": "barr2026wescon",
+      "source": "Publisher article and publisher-deposited Crossref metadata",
+      "kind": "journal_article",
+      "doi": "10.1002/gdj3.70092",
+      "publisher_url": "https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.70092",
+      "metadata_source_urls": [
+        "https://api.crossref.org/works/10.1002%2Fgdj3.70092"
+      ],
+      "metadata_verified_at": "2026-11-07",
+      "metadata_verification": "Published online 29 October 2026; 47 authors in publisher-deposited order, including Ryan R. Neely III as second author; volume 13, issue 4, article e70092."
+    },
+    {
       "key": "lo2026zdr",
       "source": "Publisher-deposited Crossref metadata and University of Reading author publication record",
       "kind": "journal_article",
