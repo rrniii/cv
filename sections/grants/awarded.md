@@ -7,6 +7,7 @@ tex: generated/tex/grants/awarded
 
 ### Principal, Co-Principal and UK Principal Investigator awards
 
+- 2026 -- 2028 | £432,116 (UK award) | **SnøTroll: A Norwegian, American and British Contribution to Antarctica InSync** (NERC--NSF GEO); UK Principal Investigator.
 - 2025 -- 2027 | approximately £2.7m | **GAMB2LE: Greenland Automated Mass Balance and Boundary Layer Experiment** (ARIA); Co-PI.
 - 2024 -- 2028 | £750k | **Next-Generation Cloud Radar for the UK Community** (NERC capital award); PI.
 - 2023 -- 2027 | £1.875m across six organisations | **WOEST: Observing the Evolving Structures of Turbulence** (NERC); programme PI.

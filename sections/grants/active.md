@@ -5,6 +5,7 @@ tex: generated/tex/grants/active
 
 ## Selected Current Funded Programmes
 
+- 2026 -- 2028 | £432,116 (UK award) | **SnøTroll: A Norwegian, American and British Contribution to Antarctica InSync** (NERC--NSF GEO); UK Principal Investigator.
 - 2025 -- 2027 | approximately £2.7m | **GAMB2LE: Greenland Automated Mass Balance and Boundary Layer Experiment** (ARIA); Co-PI.
 - 2025 -- 2028 | £6.1m | **REFLECT: A Responsible Innovation Framework for Assessing Novel Spray Technology Research to Examine Local Albedo Changes from Marine Brightening and Its Multi-Scale Impacts** (ARIA); Co-Investigator.
 - 2025 -- 2028 | £1.7m; time and data contributed in kind | **AVOCET: Migratory Avifauna and Offshore Wind Farms: Improving the Assessment of Collision Risks Using Observations from Weather Radars** (France Energies Marines); Co-Investigator and WP2 contributor.
