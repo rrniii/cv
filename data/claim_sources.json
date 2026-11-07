@@ -2,6 +2,14 @@
   "checked_at": "2026-10-11",
   "records": [
     {
+      "claim": "SnøTroll NERC UK award 2026--2028, £432,116, Principal Investigator",
+      "status": "added",
+      "grant_reference": "UKRI4313",
+      "source": "https://gtr.ukri.org/projects?ref=UKRI4313",
+      "checked_at": "2026-11-07",
+      "note": "UKRI funded period and UK award amount; fieldwork timing may differ."
+    },
+    {
       "claim": "Professor of Atmospheric Physics",
       "status": "confirmed",
       "sources": [
