@@ -28,7 +28,9 @@ restored documented awards, collaborations and professional roles. Claim
 evidence and source provenance are recorded in [data/claim_sources.json](data/claim_sources.json)
 and dataset records in [data/dataset_sources.json](data/dataset_sources.json).
 The 7 November 2026 update adds the published WesCon--WOEST campaign article
-from the publisher record; its full author list is retained.
+from the publisher record and the Greenland melt EarthArXiv preprint; full
+author lists are retained. The Antarctic Science editorial-board invitation
+was accepted in November 2026, with appointment arrangements pending.
 Dataset dates follow the linked catalogue's canonical citation year when it
 differs from the date the data first appeared online. VolcanEESM version 2.0
 is explicitly an unpublished catalogue preview. Funding amounts retain the
