@@ -50,8 +50,11 @@
       "source": "Author-provided academic CV, September 2026",
       "source_paragraph": 133,
       "source_number": 68,
-      "kind": "preprint",
-      "doi": "10.5194/egusphere-2026-1842"
+      "kind": "journal_article",
+      "doi": "10.5194/tc-20-6423-2026",
+      "publisher_url": "https://tc.copernicus.org/articles/20/6423/2026/",
+      "metadata_verified_at": "2026-11-22",
+      "metadata_verification": "Published 11 November 2026 in volume 20, issue 11, pages 6423–6452. The publisher lists Ryan R. Neely III ninth of 15 authors. Supersedes EGUsphere preprint 10.5194/egusphere-2026-1842."
     },
     {
       "key": "martin2026p67",
